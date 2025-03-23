@@ -1,0 +1,3003 @@
+[
+  {
+    "id": "1",
+    "text": "¿Qué widget permite crear una lista desplazable de elementos?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Container"
+      },
+      {
+        "id": "B",
+        "text": "ListView"
+      },
+      {
+        "id": "C",
+        "text": "Row"
+      },
+      {
+        "id": "D",
+        "text": "Column"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "ListView es un widget que permite mostrar una lista desplazable de hijos uno tras otro en la dirección de desplazamiento.",
+    "category": "Widgets"
+  },
+  {
+    "id": "2",
+    "text": "¿Cuál es la diferencia principal entre StatelessWidget y StatefulWidget?",
+    "options": [
+      {
+        "id": "A",
+        "text": "No hay diferencia, se pueden usar indistintamente"
+      },
+      {
+        "id": "B",
+        "text": "StatelessWidget es más eficiente y siempre debe preferirse"
+      },
+      {
+        "id": "C",
+        "text": "StatefulWidget almacena estado mientras que StatelessWidget no"
+      },
+      {
+        "id": "D",
+        "text": "StatelessWidget es para diseño y StatefulWidget para lógica"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "La principal diferencia es que StatefulWidget puede mantener un estado mutable que puede cambiar durante la vida del widget, mientras que StatelessWidget no almacena ningún estado y su apariencia no puede cambiar una vez construido.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "3",
+    "text": "¿Cuál de los siguientes NO es un widget de posicionamiento en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Align"
+      },
+      {
+        "id": "B",
+        "text": "Stack"
+      },
+      {
+        "id": "C",
+        "text": "Positioned"
+      },
+      {
+        "id": "D",
+        "text": "Modifier"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "Modifier no es un widget de Flutter. Align, Stack y Positioned son widgets utilizados para el posicionamiento de elementos en la interfaz.",
+    "category": "Widgets"
+  },
+  {
+    "id": "4",
+    "text": "¿Qué hace el siguiente código?",
+    "codeSnippet": "void main() {\n  runApp(const MyApp());\n}\n\nclass MyApp extends StatelessWidget {\n  const MyApp({Key? key}) : super(key: key);\n\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(title: const Text('Mi App')),\n        body: const Center(child: Text('Hola Mundo')),\n      ),\n    );\n  }\n}",
+    "options": [
+      {
+        "id": "A",
+        "text": "Crea una aplicación iOS nativa"
+      },
+      {
+        "id": "B",
+        "text": "Muestra un error porque faltan importaciones"
+      },
+      {
+        "id": "C",
+        "text": "Crea una aplicación Flutter con un texto centrado"
+      },
+      {
+        "id": "D",
+        "text": "Define una clase que no puede ser instanciada"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "El código crea una aplicación Flutter con MaterialApp como raíz, un Scaffold como estructura principal, un AppBar en la parte superior y un texto centrado que dice 'Hola Mundo' en el cuerpo de la aplicación.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "5",
+    "text": "¿Qué método se utiliza para actualizar el estado de un StatefulWidget?",
+    "options": [
+      {
+        "id": "A",
+        "text": "updateState()"
+      },
+      {
+        "id": "B",
+        "text": "setState()"
+      },
+      {
+        "id": "C",
+        "text": "refresh()"
+      },
+      {
+        "id": "D",
+        "text": "rebuild()"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "setState() es el método que se utiliza para notificar al framework que el estado interno ha cambiado y que se debe reconstruir la interfaz de usuario para reflejar los cambios.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "6",
+    "text": "¿Qué es un BuildContext en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una clase para construir interfaces de usuario"
+      },
+      {
+        "id": "B",
+        "text": "Un objeto que contiene información sobre la ubicación de un widget en el árbol de widgets"
+      },
+      {
+        "id": "C",
+        "text": "Una función que retorna widgets"
+      },
+      {
+        "id": "D",
+        "text": "Un método para compilar código Flutter"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "BuildContext es un objeto que contiene información sobre la ubicación de un widget en el árbol de widgets. Se utiliza para acceder a temas, MediaQuery, Navigator y otros datos desde el árbol.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "7",
+    "text": "¿Cuál es la diferencia entre hot reload y hot restart en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "No hay diferencia, son términos intercambiables"
+      },
+      {
+        "id": "B",
+        "text": "Hot reload actualiza la UI conservando el estado, hot restart reinicia completamente la aplicación"
+      },
+      {
+        "id": "C",
+        "text": "Hot reload es más lento que hot restart"
+      },
+      {
+        "id": "D",
+        "text": "Hot restart solo funciona en modo de depuración"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Hot reload inyecta el código actualizado en la máquina virtual de Dart y Flutter reconstruye el árbol de widgets conservando el estado. Hot restart reinicia completamente la aplicación, perdiendo todo el estado.",
+    "category": "Desarrollo"
+  },
+  {
+    "id": "8",
+    "text": "¿Qué método se llama automáticamente cuando un StatefulWidget se inserta en el árbol?",
+    "options": [
+      {
+        "id": "A",
+        "text": "build()"
+      },
+      {
+        "id": "B",
+        "text": "initState()"
+      },
+      {
+        "id": "C",
+        "text": "createState()"
+      },
+      {
+        "id": "D",
+        "text": "didChangeDependencies()"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "El método createState() se llama automáticamente cuando un StatefulWidget se inserta en el árbol. Este método debe sobrescribirse para crear el objeto State asociado al StatefulWidget.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "9",
+    "text": "¿Qué widget deberías usar para centrar un hijo horizontalmente en la pantalla?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Row con mainAxisAlignment.center"
+      },
+      {
+        "id": "B",
+        "text": "Column con crossAxisAlignment.center"
+      },
+      {
+        "id": "C",
+        "text": "Center"
+      },
+      {
+        "id": "D",
+        "text": "Container con alignment: Alignment.center"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Para centrar un hijo horizontalmente, debes usar un Row con mainAxisAlignment.center. El Center widget centra su hijo tanto horizontal como verticalmente.",
+    "category": "Widgets"
+  },
+  {
+    "id": "10",
+    "text": "¿Cuál es la función principal de un GlobalKey en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Permitir que un widget sea único en toda la aplicación"
+      },
+      {
+        "id": "B",
+        "text": "Encriptar datos sensibles en la aplicación"
+      },
+      {
+        "id": "C",
+        "text": "Optimizar el rendimiento de la aplicación"
+      },
+      {
+        "id": "D",
+        "text": "Configurar el tema global de la aplicación"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Un GlobalKey proporciona acceso a un widget específico y su estado, permitiendo identificarlo de manera única en toda la aplicación. Esto permite acceder a métodos y propiedades de sus State asociados desde cualquier parte del código.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "11",
+    "text": "¿Qué método se utiliza para manejar la navegación entre pantallas en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Navigator.go()"
+      },
+      {
+        "id": "B",
+        "text": "Navigator.push()"
+      },
+      {
+        "id": "C",
+        "text": "Navigator.navigate()"
+      },
+      {
+        "id": "D",
+        "text": "Navigator.moveTo()"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Navigator.push() es el método que se utiliza para navegar a una nueva pantalla/página. Recibe un BuildContext y una ruta (Route) como parámetros.",
+    "category": "Navegación"
+  },
+  {
+    "id": "12",
+    "text": "¿Cuál widget deberías usar para crear un diseño responsivo que se adapte a diferentes tamaños de pantalla?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Container"
+      },
+      {
+        "id": "B",
+        "text": "Flexible"
+      },
+      {
+        "id": "C",
+        "text": "LayoutBuilder"
+      },
+      {
+        "id": "D",
+        "text": "SizedBox"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "LayoutBuilder proporciona las restricciones de diseño impuestas por el padre y permite crear widgets diferentes basados en el espacio disponible, lo que lo hace ideal para diseños responsivos.",
+    "category": "Widgets"
+  },
+  {
+    "id": "13",
+    "text": "¿Qué es el widget Scaffold en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget para crear formularios"
+      },
+      {
+        "id": "B",
+        "text": "Una implementación de Material Design que proporciona una estructura básica para una pantalla"
+      },
+      {
+        "id": "C",
+        "text": "Un widget para gestionar el ciclo de vida de la aplicación"
+      },
+      {
+        "id": "D",
+        "text": "Un contenedor para almacenar datos de estado"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Scaffold es un widget que implementa la estructura básica de diseño visual de Material Design. Proporciona APIs para mostrar drawers, snack bars, y bottom sheets.",
+    "category": "Widgets"
+  },
+  {
+    "id": "14",
+    "text": "¿Qué es Flutter Web?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un navegador web creado con Flutter"
+      },
+      {
+        "id": "B",
+        "text": "Una plataforma para desarrollar aplicaciones web utilizando Flutter"
+      },
+      {
+        "id": "C",
+        "text": "Un plugin para ejecutar código JavaScript en Flutter"
+      },
+      {
+        "id": "D",
+        "text": "Un framework complementario para crear APIs RESTful"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Flutter Web es una plataforma que permite compilar aplicaciones Flutter para ejecutarse en navegadores web, utilizando los mismos widgets y código que se usa para aplicaciones móviles.",
+    "category": "Plataformas"
+  },
+  {
+    "id": "15",
+    "text": "¿Cuál es la principal diferencia entre StatefulWidget y BLoC?",
+    "options": [
+      {
+        "id": "A",
+        "text": "No hay diferencia, son intercambiables"
+      },
+      {
+        "id": "B",
+        "text": "StatefulWidget es un widget, BLoC es un patrón de gestión de estado"
+      },
+      {
+        "id": "C",
+        "text": "BLoC solo funciona con StatelessWidget"
+      },
+      {
+        "id": "D",
+        "text": "StatefulWidget solo funciona con Provider"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "StatefulWidget es una clase de widget que mantiene un estado mutable, mientras que BLoC (Business Logic Component) es un patrón de diseño para gestionar el estado y la lógica de negocio de forma separada de la UI.",
+    "category": "Arquitectura"
+  },
+  {
+    "id": "16",
+    "text": "¿Qué hace el método dispose() en un State de StatefulWidget?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Elimina widgets no utilizados"
+      },
+      {
+        "id": "B",
+        "text": "Libera recursos cuando el widget se elimina del árbol"
+      },
+      {
+        "id": "C",
+        "text": "Restablece el estado a sus valores iniciales"
+      },
+      {
+        "id": "D",
+        "text": "Actualiza automáticamente la UI"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "El método dispose() se llama cuando el State se elimina permanentemente del árbol. Es el lugar adecuado para limpiar recursos como suscripciones a streams, controladores de animación, o FocusNode que podrían causar fugas de memoria.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "17",
+    "text": "¿Qué es un FutureBuilder en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget que construye su árbol de widgets en el futuro"
+      },
+      {
+        "id": "B",
+        "text": "Un widget que construye diferentes widgets según el estado de un Future"
+      },
+      {
+        "id": "C",
+        "text": "Una clase para crear tareas asíncronas"
+      },
+      {
+        "id": "D",
+        "text": "Una herramienta para programar la construcción de widgets"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "FutureBuilder es un widget que toma un Future y un builder que construye diferentes widgets según el estado del Future (en espera, completado o con error).",
+    "category": "Asincronía"
+  },
+  {
+    "id": "18",
+    "text": "¿Cuál es la diferencia entre SizedBox y Container?",
+    "options": [
+      {
+        "id": "A",
+        "text": "SizedBox solo puede tener un tamaño fijo mientras que Container puede expandirse"
+      },
+      {
+        "id": "B",
+        "text": "Container tiene más propiedades de estilo como decoration, mientras SizedBox es más simple"
+      },
+      {
+        "id": "C",
+        "text": "SizedBox solo puede contener un widget Text"
+      },
+      {
+        "id": "D",
+        "text": "No hay diferencia, son widgets equivalentes"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "SizedBox es un widget simple que impone restricciones de tamaño a su hijo. Container es más complejo y ofrece propiedades adicionales como decoration, padding, margin, color, etc.",
+    "category": "Widgets"
+  },
+  {
+    "id": "19",
+    "text": "¿Qué es un StreamBuilder en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget para construir animaciones fluidas"
+      },
+      {
+        "id": "B",
+        "text": "Un widget que construye diferentes widgets según los valores emitidos por un Stream"
+      },
+      {
+        "id": "C",
+        "text": "Una clase para crear flujos de datos"
+      },
+      {
+        "id": "D",
+        "text": "Una herramienta para transmitir datos entre widgets"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "StreamBuilder es un widget que toma un Stream y un builder que construye diferentes widgets según los valores emitidos por el Stream a lo largo del tiempo.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "20",
+    "text": "¿Qué es un CustomPainter en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una herramienta para personalizar la apariencia de los widgets estándar"
+      },
+      {
+        "id": "B",
+        "text": "Una clase que permite dibujar gráficos personalizados utilizando el lienzo (Canvas) de Flutter"
+      },
+      {
+        "id": "C",
+        "text": "Un widget para cambiar el tema de la aplicación"
+      },
+      {
+        "id": "D",
+        "text": "Un constructor para crear widgets con estilos predefinidos"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "CustomPainter es una clase abstracta que define operaciones de pintura personalizadas. Se implementa para crear gráficos personalizados utilizando el objeto Canvas de Flutter y sus métodos de dibujo.",
+    "category": "Gráficos"
+  },
+  {
+    "id": "21",
+    "text": "¿Qué widget se utiliza para crear un botón con un icono en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "RaisedButton"
+      },
+      {
+        "id": "B",
+        "text": "IconButton"
+      },
+      {
+        "id": "C",
+        "text": "FlatIconButton"
+      },
+      {
+        "id": "D",
+        "text": "ButtonIcon"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "IconButton es un widget específico para crear botones con iconos en Flutter. Permite definir un icono y una acción a ejecutar cuando se pulsa.",
+    "category": "Widgets"
+  },
+  {
+    "id": "22",
+    "text": "¿Qué método se debe implementar para definir la interfaz de usuario en un widget de Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "create()"
+      },
+      {
+        "id": "B",
+        "text": "render()"
+      },
+      {
+        "id": "C",
+        "text": "build()"
+      },
+      {
+        "id": "D",
+        "text": "initialize()"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "El método build() debe implementarse en todos los widgets de Flutter para definir la estructura de la interfaz de usuario. Es donde se definen los widgets que componen la interfaz.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "23",
+    "text": "En Dart, ¿qué operador se utiliza para una verificación de nulos más segura?",
+    "options": [
+      {
+        "id": "A",
+        "text": "?."
+      },
+      {
+        "id": "B",
+        "text": "!!"
+      },
+      {
+        "id": "C",
+        "text": "??"
+      },
+      {
+        "id": "D",
+        "text": "$$"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "El operador ?. (operador de acceso seguro) se utiliza para realizar una verificación de nulos más segura. Si el objeto es nulo, la expresión completa evalúa a nulo en lugar de lanzar una excepción.",
+    "category": "Dart"
+  },
+  {
+    "id": "24",
+    "text": "¿Cuál es la mejor forma de implementar una lista infinita (lazy loading) en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "ListView"
+      },
+      {
+        "id": "B",
+        "text": "ListView.builder"
+      },
+      {
+        "id": "C",
+        "text": "InfiniteList"
+      },
+      {
+        "id": "D",
+        "text": "LazyList"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "ListView.builder es ideal para listas potencialmente infinitas ya que construye los elementos solo cuando son visibles en pantalla, lo que mejora significativamente el rendimiento para listas grandes.",
+    "category": "Widgets"
+  },
+  {
+    "id": "25",
+    "text": "¿Qué paquete se utiliza comúnmente para la gestión de estado basada en BLoC en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "flutter_provider"
+      },
+      {
+        "id": "B",
+        "text": "redux_flutter"
+      },
+      {
+        "id": "C",
+        "text": "flutter_bloc"
+      },
+      {
+        "id": "D",
+        "text": "state_management"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "flutter_bloc es un paquete popular que facilita la implementación del patrón BLoC (Business Logic Component) para la gestión de estado en aplicaciones Flutter.",
+    "category": "Arquitectura"
+  },
+  {
+    "id": "26",
+    "text": "¿Qué propiedad del widget Container permite añadir márgenes externos?",
+    "options": [
+      {
+        "id": "A",
+        "text": "space"
+      },
+      {
+        "id": "B",
+        "text": "margin"
+      },
+      {
+        "id": "C",
+        "text": "padding"
+      },
+      {
+        "id": "D",
+        "text": "border"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "La propiedad margin del widget Container permite añadir espacio alrededor del exterior del container, mientras que padding añade espacio en el interior.",
+    "category": "Widgets"
+  },
+  {
+    "id": "27",
+    "text": "¿Cuál es la función principal del widget Scaffold en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Proporcionar una estructura visual básica siguiendo el Material Design"
+      },
+      {
+        "id": "B",
+        "text": "Gestionar las animaciones en la aplicación"
+      },
+      {
+        "id": "C",
+        "text": "Almacenar datos persistentes"
+      },
+      {
+        "id": "D",
+        "text": "Optimizar el rendimiento de la aplicación"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "El widget Scaffold implementa la estructura visual básica del Material Design. Proporciona APIs para mostrar drawers, snack bars y bottom sheets.",
+    "category": "Widgets"
+  },
+  {
+    "id": "28",
+    "text": "¿Qué widget se utiliza para crear un menú lateral deslizable en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "SidePanel"
+      },
+      {
+        "id": "B",
+        "text": "SlideMenu"
+      },
+      {
+        "id": "C",
+        "text": "Drawer"
+      },
+      {
+        "id": "D",
+        "text": "SideBar"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "El widget Drawer se utiliza para crear un panel lateral deslizable que generalmente contiene opciones de navegación. Se usa como propiedad del widget Scaffold.",
+    "category": "Widgets"
+  },
+  {
+    "id": "29",
+    "text": "En Dart, ¿qué tipo de datos se utiliza para representar una secuencia de caracteres?",
+    "options": [
+      {
+        "id": "A",
+        "text": "char[]"
+      },
+      {
+        "id": "B",
+        "text": "String"
+      },
+      {
+        "id": "C",
+        "text": "Text"
+      },
+      {
+        "id": "D",
+        "text": "Characters"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "En Dart, el tipo String se utiliza para representar una secuencia de caracteres. Es inmutable, lo que significa que una vez creado no puede ser modificado.",
+    "category": "Dart"
+  },
+  {
+    "id": "30",
+    "text": "¿Cuál es el propósito del widget SafeArea en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Prevenir acceso no autorizado a la aplicación"
+      },
+      {
+        "id": "B",
+        "text": "Evitar que el contenido sea recortado por características del dispositivo como el notch o bordes redondeados"
+      },
+      {
+        "id": "C",
+        "text": "Cifrar datos sensibles en la aplicación"
+      },
+      {
+        "id": "D",
+        "text": "Proporcionar un área de seguridad para widgets críticos"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "SafeArea es un widget que inserta su hijo con suficiente padding para evitar intrusiones del sistema operativo, como la muesca (notch) en la parte superior de algunos dispositivos iOS o la barra de navegación en Android.",
+    "category": "Widgets"
+  },
+  {
+    "id": "31",
+    "text": "¿Qué método se utiliza para realizar navegación a una nueva pantalla y reemplazar la actual en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Navigator.push()"
+      },
+      {
+        "id": "B",
+        "text": "Navigator.replace()"
+      },
+      {
+        "id": "C",
+        "text": "Navigator.pushReplacement()"
+      },
+      {
+        "id": "D",
+        "text": "Navigator.goto()"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Navigator.pushReplacement() se utiliza para navegar a una nueva pantalla y reemplazar la actual en la pila de navegación, lo que significa que el usuario no podrá volver a la pantalla anterior con el botón atrás.",
+    "category": "Navegación"
+  },
+  {
+    "id": "32",
+    "text": "¿Qué widget se debe utilizar para crear una cuadrícula de elementos con tamaño fijo en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "GridView.count"
+      },
+      {
+        "id": "B",
+        "text": "ListView.grid"
+      },
+      {
+        "id": "C",
+        "text": "Column con Row anidadas"
+      },
+      {
+        "id": "D",
+        "text": "TableView"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "GridView.count crea una cuadrícula con un número fijo de elementos en la dirección transversal. Es ideal para mostrar elementos en formato de rejilla con tamaño fijo.",
+    "category": "Widgets"
+  },
+  {
+    "id": "33",
+    "text": "¿Cuál es la diferencia entre const y final en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "No hay diferencia, son sinónimos"
+      },
+      {
+        "id": "B",
+        "text": "const es para variables de clase y final para variables locales"
+      },
+      {
+        "id": "C",
+        "text": "final se establece en tiempo de ejecución, mientras que const debe ser conocido en tiempo de compilación"
+      },
+      {
+        "id": "D",
+        "text": "const solo se puede usar en funciones, mientras que final solo en clases"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "En Dart, final indica que la variable solo puede ser asignada una vez y su valor es inmutable, pero puede ser determinado en tiempo de ejecución. const debe ser conocido en tiempo de compilación y también crea objetos inmutables.",
+    "category": "Dart"
+  },
+  {
+    "id": "34",
+    "text": "¿Qué widget se usa para crear una barra de navegación inferior en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "NavBar"
+      },
+      {
+        "id": "B",
+        "text": "BottomNavigationBar"
+      },
+      {
+        "id": "C",
+        "text": "FooterMenu"
+      },
+      {
+        "id": "D",
+        "text": "TabBar"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "BottomNavigationBar es un widget de Material Design que muestra de 3 a 5 destinos en la parte inferior de la pantalla, permitiendo al usuario navegar entre diferentes secciones de la aplicación.",
+    "category": "Widgets"
+  },
+  {
+    "id": "35",
+    "text": "¿Qué método se utiliza para ejecutar código asíncrono en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "execute()"
+      },
+      {
+        "id": "B",
+        "text": "runAsync()"
+      },
+      {
+        "id": "C",
+        "text": "await"
+      },
+      {
+        "id": "D",
+        "text": "parallel()"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "El operador await se utiliza en funciones async para pausar la ejecución hasta que se complete una Future. Esto permite escribir código asíncrono de manera que parezca síncrono, facilitando su comprensión.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "36",
+    "text": "¿Qué es un StatelessWidget en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget que no puede tener hijos"
+      },
+      {
+        "id": "B",
+        "text": "Un widget cuyo estado puede cambiar durante su vida útil"
+      },
+      {
+        "id": "C",
+        "text": "Un widget que describe parte de la interfaz de usuario que no depende de nada más que de la configuración de inicialización"
+      },
+      {
+        "id": "D",
+        "text": "Un widget que solo se puede usar en la raíz de la aplicación"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Un StatelessWidget es un widget que describe parte de la interfaz de usuario que no depende de nada más que de la configuración de inicialización y no puede cambiar durante la vida útil del widget.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "37",
+    "text": "¿Qué función tiene el widget GestureDetector en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Detectar errores en tiempo de ejecución"
+      },
+      {
+        "id": "B",
+        "text": "Detectar gestos como toques, arrastres, pellizcos, etc."
+      },
+      {
+        "id": "C",
+        "text": "Crear animaciones basadas en gestos"
+      },
+      {
+        "id": "D",
+        "text": "Mejorar el rendimiento de la aplicación"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "GestureDetector es un widget que detecta gestos como toques, arrastres, pellizcos, etc. Permite agregar interactividad a otros widgets que normalmente no responden a la entrada del usuario.",
+    "category": "Widgets"
+  },
+  {
+    "id": "38",
+    "text": "¿Qué es un Future en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una clase para planificar tareas en el futuro"
+      },
+      {
+        "id": "B",
+        "text": "Un objeto que representa el resultado de una operación asíncrona"
+      },
+      {
+        "id": "C",
+        "text": "Un tipo especial de función que se ejecuta después de un delay"
+      },
+      {
+        "id": "D",
+        "text": "Una interfaz para implementar operaciones de larga duración"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Un Future es un objeto que representa el resultado de una operación asíncrona. Puede contener un valor o un error, y permite trabajar con operaciones como peticiones de red o acceso a bases de datos sin bloquear la ejecución.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "39",
+    "text": "¿Qué widget se usa para crear un menú desplegable en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "DropdownMenu"
+      },
+      {
+        "id": "B",
+        "text": "PopupMenu"
+      },
+      {
+        "id": "C",
+        "text": "DropdownButton"
+      },
+      {
+        "id": "D",
+        "text": "SelectMenu"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "DropdownButton es un widget de Material Design que muestra un menú desplegable cuando se pulsa, permitiendo al usuario seleccionar un valor de una lista de opciones.",
+    "category": "Widgets"
+  },
+  {
+    "id": "40",
+    "text": "¿Cuál es la forma correcta de definir un constructor en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "constructor MiClase() { }"
+      },
+      {
+        "id": "B",
+        "text": "MiClase.constructor() { }"
+      },
+      {
+        "id": "C",
+        "text": "MiClase() { }"
+      },
+      {
+        "id": "D",
+        "text": "new MiClase() { }"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "En Dart, los constructores se definen utilizando el nombre de la clase seguido de paréntesis y un bloque de código. También es posible definir constructores con nombre utilizando NombreClase.nombreConstructor().",
+    "category": "Dart"
+  },
+  {
+    "id": "41",
+    "text": "¿Qué widget se utiliza para crear un campo de texto editable en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "InputField"
+      },
+      {
+        "id": "B",
+        "text": "EditText"
+      },
+      {
+        "id": "C",
+        "text": "TextField"
+      },
+      {
+        "id": "D",
+        "text": "TextInput"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "TextField es el widget utilizado en Flutter para crear campos de texto editables. Permite a los usuarios ingresar texto y ofrece numerosas opciones de personalización como decoración, validación y control de entrada.",
+    "category": "Widgets"
+  },
+  {
+    "id": "42",
+    "text": "¿Qué es un mixin en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una clase que solo puede ser instanciada una vez"
+      },
+      {
+        "id": "B",
+        "text": "Una forma de reutilizar código en múltiples jerarquías de clases"
+      },
+      {
+        "id": "C",
+        "text": "Un método especial para mezclar widgets"
+      },
+      {
+        "id": "D",
+        "text": "Una función que combina múltiples streams"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "En Dart, un mixin es una forma de reutilizar el código de una clase en múltiples jerarquías de clases. Los mixins se definen usando la palabra clave 'mixin' y se aplican a una clase usando 'with'.",
+    "category": "Dart"
+  },
+  {
+    "id": "43",
+    "text": "¿Cuál es el propósito del widget Hero en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Crear un widget destacado visualmente"
+      },
+      {
+        "id": "B",
+        "text": "Añadir superpoderes a la aplicación"
+      },
+      {
+        "id": "C",
+        "text": "Definir el widget principal de la aplicación"
+      },
+      {
+        "id": "D",
+        "text": "Crear una animación fluida entre pantallas para un widget"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "El widget Hero se utiliza para crear una animación de transición entre pantallas para un elemento. Marca un widget en una pantalla para que se anime hacia su posición en la siguiente pantalla, creando una experiencia de navegación fluida.",
+    "category": "Animación"
+  },
+  {
+    "id": "44",
+    "text": "¿Qué patrón de diseño implementa el BLoC en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Modelo-Vista-Controlador (MVC)"
+      },
+      {
+        "id": "B",
+        "text": "Singleton"
+      },
+      {
+        "id": "C",
+        "text": "Observer"
+      },
+      {
+        "id": "D",
+        "text": "Factory"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "El patrón BLoC (Business Logic Component) implementa principalmente el patrón Observer, donde los widgets se suscriben a los cambios de estado y se reconstruyen cuando el estado cambia, separando la lógica de negocio de la interfaz de usuario.",
+    "category": "Arquitectura"
+  },
+  {
+    "id": "45",
+    "text": "¿Qué hace el widget AnimatedContainer en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Contiene widgets animados"
+      },
+      {
+        "id": "B",
+        "text": "Anima automáticamente cambios en sus propiedades"
+      },
+      {
+        "id": "C",
+        "text": "Crea contenedores que se mueven aleatoriamente"
+      },
+      {
+        "id": "D",
+        "text": "Aplica efectos visuales a su contenido"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "AnimatedContainer es una versión del widget Container que puede animar automáticamente cambios en sus propiedades (como color, tamaño, padding) durante un período de tiempo definido.",
+    "category": "Animación"
+  },
+  {
+    "id": "46",
+    "text": "¿Qué método se debe sobreescribir en un StatefulWidget para liberar recursos?",
+    "options": [
+      {
+        "id": "A",
+        "text": "release()"
+      },
+      {
+        "id": "B",
+        "text": "deactivate()"
+      },
+      {
+        "id": "C",
+        "text": "dispose()"
+      },
+      {
+        "id": "D",
+        "text": "cleanup()"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "El método dispose() se llama cuando un StatefulWidget se elimina permanentemente del árbol. Es el lugar adecuado para liberar recursos como controladores, suscripciones a streams o cualquier otro recurso que pueda causar fugas de memoria.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "47",
+    "text": "¿Qué es un Stream en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una secuencia de datos asíncronos"
+      },
+      {
+        "id": "B",
+        "text": "Un tipo especial de Future"
+      },
+      {
+        "id": "C",
+        "text": "Una función que se ejecuta en segundo plano"
+      },
+      {
+        "id": "D",
+        "text": "Un método para transmitir vídeo"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Un Stream en Dart es una secuencia de datos asíncronos. A diferencia de Future, que proporciona un solo valor asíncrono, un Stream puede proporcionar múltiples valores a lo largo del tiempo.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "48",
+    "text": "¿Qué biblioteca se utiliza para realizar peticiones HTTP en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "flutter_http"
+      },
+      {
+        "id": "B",
+        "text": "http"
+      },
+      {
+        "id": "C",
+        "text": "net"
+      },
+      {
+        "id": "D",
+        "text": "web_requests"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "La biblioteca 'http' es la forma estándar de realizar peticiones HTTP en aplicaciones Flutter. Proporciona clases y funciones para realizar solicitudes GET, POST, PUT, DELETE, etc.",
+    "category": "Networking"
+  },
+  {
+    "id": "49",
+    "text": "¿Qué widget se utiliza para crear una lista con secciones y cabeceras en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "SectionedList"
+      },
+      {
+        "id": "B",
+        "text": "ListView con headers"
+      },
+      {
+        "id": "C",
+        "text": "GroupedListView"
+      },
+      {
+        "id": "D",
+        "text": "ListView.separated"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "ListView.separated permite crear una lista con separadores entre elementos. Combinado con elementos de cabecera, puede usarse para crear listas con secciones y cabeceras.",
+    "category": "Widgets"
+  },
+  {
+    "id": "50",
+    "text": "¿Cuál es el propósito del widget MediaQuery en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Reproducir archivos multimedia"
+      },
+      {
+        "id": "B",
+        "text": "Consultar el tamaño de la pantalla y otras características del dispositivo"
+      },
+      {
+        "id": "C",
+        "text": "Gestionar consultas a la base de datos"
+      },
+      {
+        "id": "D",
+        "text": "Realizar peticiones HTTP"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "MediaQuery permite a los widgets obtener información sobre el entorno actual del dispositivo, como el tamaño de la pantalla, la orientación, la densidad de píxeles, etc., facilitando la creación de interfaces adaptativas.",
+    "category": "Widgets"
+  },
+  {
+    "id": "51",
+    "text": "¿Qué permite hacer el widget InheritedWidget en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Crear clases que heredan propiedades de otras clases"
+      },
+      {
+        "id": "B",
+        "text": "Proporcionar datos a widgets descendientes sin pasarlos explícitamente"
+      },
+      {
+        "id": "C",
+        "text": "Heredar el estilo visual de su widget padre"
+      },
+      {
+        "id": "D",
+        "text": "Garantizar que un widget solo se dibuje una vez"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "InheritedWidget es un tipo de widget que permite propagar datos eficientemente por el árbol de widgets, permitiendo que los widgets descendientes accedan a esos datos sin necesidad de pasarlos explícitamente a través de constructores.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "52",
+    "text": "¿Qué es un Future<void> en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un Future que nunca se completa"
+      },
+      {
+        "id": "B",
+        "text": "Un Future que no retorna ningún valor cuando se completa"
+      },
+      {
+        "id": "C",
+        "text": "Un Future que se ejecuta en segundo plano"
+      },
+      {
+        "id": "D",
+        "text": "Un tipo especial de Future para operaciones largas"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Un Future<void> es un Future que no retorna ningún valor útil cuando se completa. Se utiliza comúnmente para operaciones asíncronas donde solo nos interesa saber cuándo ha terminado la operación, no su resultado.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "53",
+    "text": "¿Qué widget se utiliza para definir una transición de página personalizada en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "RouteTransition"
+      },
+      {
+        "id": "B",
+        "text": "PageAnimation"
+      },
+      {
+        "id": "C",
+        "text": "CustomRoute"
+      },
+      {
+        "id": "D",
+        "text": "PageRouteBuilder"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "PageRouteBuilder permite definir transiciones de página personalizadas especificando cómo se anima la entrada y salida de las páginas en la navegación.",
+    "category": "Navegación"
+  },
+  {
+    "id": "54",
+    "text": "¿Qué característica proporciona el widget FutureBuilder?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Construye widgets basados en el resultado futuro de un cálculo"
+      },
+      {
+        "id": "B",
+        "text": "Crea widgets que se renderizarán en el futuro"
+      },
+      {
+        "id": "C",
+        "text": "Optimiza el rendimiento de la construcción de widgets"
+      },
+      {
+        "id": "D",
+        "text": "Planifica la construcción de widgets para más tarde"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "FutureBuilder es un widget que construye a sí mismo basado en la última instantánea de interacción con un Future. Permite mostrar diferentes widgets dependiendo del estado del Future (en espera, completado o con error).",
+    "category": "Asincronía"
+  },
+  {
+    "id": "55",
+    "text": "¿Cuál es la diferencia entre ListView y SingleChildScrollView en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "ListView solo puede contener un tipo de widget, SingleChildScrollView puede contener varios"
+      },
+      {
+        "id": "B",
+        "text": "ListView está optimizado para listas largas, SingleChildScrollView para contenido que apenas excede el tamaño de la pantalla"
+      },
+      {
+        "id": "C",
+        "text": "ListView solo permite desplazamiento vertical, SingleChildScrollView permite ambas direcciones"
+      },
+      {
+        "id": "D",
+        "text": "No hay diferencia, son aliases del mismo widget"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "ListView está optimizado para listas potencialmente infinitas, mientras que SingleChildScrollView está diseñado para contenido que es ligeramente más grande que el espacio visible. ListView recicla los elementos no visibles para mejorar el rendimiento.",
+    "category": "Widgets"
+  },
+  {
+    "id": "56",
+    "text": "¿Qué clase se utiliza para implementar validaciones personalizadas en formularios de Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Validator"
+      },
+      {
+        "id": "B",
+        "text": "FormValidator"
+      },
+      {
+        "id": "C",
+        "text": "InputValidator"
+      },
+      {
+        "id": "D",
+        "text": "FormField"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "FormField es la clase base para crear campos de formulario personalizados con validación en Flutter. Permite crear widgets como TextFormField que pueden validar la entrada del usuario y mostrar mensajes de error.",
+    "category": "Widgets"
+  },
+  {
+    "id": "57",
+    "text": "¿Qué es el Hot Reload en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una técnica para optimizar el rendimiento de la aplicación"
+      },
+      {
+        "id": "B",
+        "text": "Una forma de actualizar la UI sin perder el estado actual durante el desarrollo"
+      },
+      {
+        "id": "C",
+        "text": "Un método para cargar recursos pesados en segundo plano"
+      },
+      {
+        "id": "D",
+        "text": "Una característica que permite a la aplicación funcionar sin conexión a internet"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Hot Reload es una característica de desarrollo de Flutter que permite ver los cambios realizados en el código casi instantáneamente sin perder el estado actual de la aplicación, lo que acelera significativamente el ciclo de desarrollo.",
+    "category": "Desarrollo"
+  },
+  {
+    "id": "58",
+    "text": "¿Qué es el widget ExpansionPanel en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un panel que se expande para llenar toda la pantalla"
+      },
+      {
+        "id": "B",
+        "text": "Un widget que muestra contenido expandible con una cabecera"
+      },
+      {
+        "id": "C",
+        "text": "Un widget que aumenta automáticamente su tamaño"
+      },
+      {
+        "id": "D",
+        "text": "Una forma de expandir el número de widgets en una lista"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "ExpansionPanel es un widget de Material Design que muestra un contenido expandible con una cabecera. Permite crear listas con secciones que pueden expandirse y contraerse, ideal para mostrar información detallada de manera organizada.",
+    "category": "Widgets"
+  },
+  {
+    "id": "59",
+    "text": "¿Cuál es la forma correcta de manejar errores en operaciones asíncronas en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Usar bloques try/finally"
+      },
+      {
+        "id": "B",
+        "text": "Usar bloques try/catch"
+      },
+      {
+        "id": "C",
+        "text": "Usar el método onError()"
+      },
+      {
+        "id": "D",
+        "text": "Usar el método handleError()"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "El uso de bloques try/catch es la forma estándar de manejar errores en operaciones asíncronas en Dart. En funciones async, se pueden capturar excepciones de Futures directamente con try/catch.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "60",
+    "text": "¿Qué son los Slivers en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Widgets especiales para crear animaciones fluidas"
+      },
+      {
+        "id": "B",
+        "text": "Componentes de bajo nivel para construir widgets personalizados de desplazamiento"
+      },
+      {
+        "id": "C",
+        "text": "Un tipo de transición entre pantallas"
+      },
+      {
+        "id": "D",
+        "text": "Widgets para renderizar efectos de sombra"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Los Slivers son componentes de desplazamiento de bajo nivel en Flutter que permiten crear comportamientos de desplazamiento personalizados. Widgets como SliverAppBar, SliverList y SliverGrid son ejemplos de slivers que pueden combinarse en un CustomScrollView.",
+    "category": "Widgets"
+  },
+  {
+    "id": "61",
+    "text": "¿Qué es el widget AspectRatio en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget que muestra imágenes manteniendo su relación de aspecto"
+      },
+      {
+        "id": "B",
+        "text": "Un widget que ajusta su hijo a una relación de aspecto específica"
+      },
+      {
+        "id": "C",
+        "text": "Un widget que calcula automáticamente la mejor relación de aspecto"
+      },
+      {
+        "id": "D",
+        "text": "Un widget que adapta su tamaño a la resolución de la pantalla"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "AspectRatio es un widget que intenta ajustar su hijo a una relación de aspecto específica. Es útil para mantener proporciones consistentes en diferentes tamaños de pantalla.",
+    "category": "Widgets"
+  },
+  {
+    "id": "62",
+    "text": "¿Qué es un Isolate en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una función que se ejecuta aislada de otras funciones"
+      },
+      {
+        "id": "B",
+        "text": "Un widget que no se ve afectado por los cambios de tema"
+      },
+      {
+        "id": "C",
+        "text": "Una unidad separada de ejecución que no comparte memoria con el hilo principal"
+      },
+      {
+        "id": "D",
+        "text": "Una clase especial que no puede ser extendida"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Un Isolate en Dart es una unidad separada de ejecución similar a un hilo, pero que no comparte memoria con otros isolates. La comunicación entre isolates se realiza a través de mensajes, lo que evita problemas de concurrencia.",
+    "category": "Dart"
+  },
+  {
+    "id": "63",
+    "text": "¿Qué hace el operador spread (...) en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Divide una cadena en caracteres individuales"
+      },
+      {
+        "id": "B",
+        "text": "Expande una colección para que sus elementos se conviertan en elementos de otra colección"
+      },
+      {
+        "id": "C",
+        "text": "Multiplica un valor varias veces"
+      },
+      {
+        "id": "D",
+        "text": "Compara dos colecciones elemento por elemento"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "El operador spread (...) en Dart expande una colección para que sus elementos se conviertan en elementos individuales de otra colección. Es útil para combinar listas o agregar elementos de una lista a otra.",
+    "category": "Dart"
+  },
+  {
+    "id": "64",
+    "text": "¿Qué widget se utiliza para crear una cuadrícula infinita en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "GridView"
+      },
+      {
+        "id": "B",
+        "text": "InfiniteGridView"
+      },
+      {
+        "id": "C",
+        "text": "GridView.builder"
+      },
+      {
+        "id": "D",
+        "text": "DynamicGridView"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "GridView.builder es el widget que permite crear cuadrículas potencialmente infinitas en Flutter. Similar a ListView.builder, construye elementos solo cuando son visibles, lo que optimiza el rendimiento para grandes conjuntos de datos.",
+    "category": "Widgets"
+  },
+  {
+    "id": "65",
+    "text": "¿Qué hace el método initState() en un StatefulWidget?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Inicializa las variables de estado cuando el widget se inserta en el árbol"
+      },
+      {
+        "id": "B",
+        "text": "Restaura el estado previo del widget"
+      },
+      {
+        "id": "C",
+        "text": "Inicializa el widget pero no su estado"
+      },
+      {
+        "id": "D",
+        "text": "Crea una nueva instancia del widget"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "El método initState() se llama cuando el StatefulWidget se inserta en el árbol por primera vez. Es el lugar ideal para inicializar variables de estado, configurar controladores o suscribirse a Streams antes de que el widget sea renderizado.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "66",
+    "text": "¿Qué es un Stream Transformer en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una clase para transformar datos antes de enviarlos a través de una API"
+      },
+      {
+        "id": "B",
+        "text": "Un objeto que puede convertir un tipo de Stream en otro"
+      },
+      {
+        "id": "C",
+        "text": "Una herramienta para mejorar el rendimiento de los Streams"
+      },
+      {
+        "id": "D",
+        "text": "Un widget especial para mostrar datos de Streams"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Un Stream Transformer en Dart es un objeto que toma un Stream de un tipo y produce un Stream de otro tipo. Permite manipular, filtrar o combinar datos que fluyen a través de un Stream.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "67",
+    "text": "¿Qué se utiliza para gestionar el estado global en una aplicación Flutter con el patrón BLoC?",
+    "options": [
+      {
+        "id": "A",
+        "text": "GlobalKey"
+      },
+      {
+        "id": "B",
+        "text": "InheritedWidget"
+      },
+      {
+        "id": "C",
+        "text": "Streams y StreamController"
+      },
+      {
+        "id": "D",
+        "text": "Singleton Pattern"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "El patrón BLoC utiliza Streams y StreamController para gestionar el estado global de una aplicación Flutter. Los Streams permiten la comunicación reactiva entre la capa de lógica de negocio y la interfaz de usuario.",
+    "category": "Arquitectura"
+  },
+  {
+    "id": "68",
+    "text": "¿Qué es el widget Semantics en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget para añadir significado semántico al contenido para accesibilidad"
+      },
+      {
+        "id": "B",
+        "text": "Un widget para analizar el significado del texto"
+      },
+      {
+        "id": "C",
+        "text": "Un widget para crear interfaces inteligentes"
+      },
+      {
+        "id": "D",
+        "text": "Un widget para mejorar SEO en aplicaciones web"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "El widget Semantics permite añadir significado semántico al contenido de la aplicación para mejorar la accesibilidad. Proporciona información a tecnologías de asistencia como lectores de pantalla, describiendo qué hace un widget o qué representa.",
+    "category": "Accesibilidad"
+  },
+  {
+    "id": "69",
+    "text": "¿Qué es el método copyWith en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un método estándar para copiar widgets"
+      },
+      {
+        "id": "B",
+        "text": "Un patrón comúnmente implementado para crear una nueva instancia con algunos valores modificados"
+      },
+      {
+        "id": "C",
+        "text": "Un método para duplicar el árbol de widgets"
+      },
+      {
+        "id": "D",
+        "text": "Una función incorporada para clonar objetos"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "copyWith es un patrón comúnmente implementado en clases inmutables para crear una nueva instancia con algunos valores modificados mientras se mantienen otros valores iguales. Es útil para trabajar con estados inmutables en Flutter.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "70",
+    "text": "¿Qué es una clase abstracta en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una clase que no puede ser instanciada directamente"
+      },
+      {
+        "id": "B",
+        "text": "Una clase que solo contiene métodos estáticos"
+      },
+      {
+        "id": "C",
+        "text": "Una clase que no puede ser extendida"
+      },
+      {
+        "id": "D",
+        "text": "Una clase con código ofuscado"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Una clase abstracta en Dart es una clase que no puede ser instanciada directamente, sino que debe ser extendida por otras clases. Puede contener métodos abstractos (sin implementación) que las clases derivadas deben implementar.",
+    "category": "Dart"
+  },
+  {
+    "id": "71",
+    "text": "¿Qué es el archivo pubspec.yaml en un proyecto Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un archivo de configuración para el servidor de publicación"
+      },
+      {
+        "id": "B",
+        "text": "Un archivo que contiene metadatos del proyecto y sus dependencias"
+      },
+      {
+        "id": "C",
+        "text": "Un archivo de documentación generado automáticamente"
+      },
+      {
+        "id": "D",
+        "text": "Un archivo de caché para optimizar el rendimiento"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "pubspec.yaml es un archivo que contiene metadatos sobre un proyecto Flutter, incluidas las dependencias, los activos (assets), las fuentes y otra información que el sistema de paquetes de Dart (pub) utiliza para gestionar el proyecto.",
+    "category": "Desarrollo"
+  },
+  {
+    "id": "72",
+    "text": "¿Qué es un StatefulBuilder en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una alternativa a StatefulWidget para widgets simples"
+      },
+      {
+        "id": "B",
+        "text": "Un widget para construir otros StatefulWidgets"
+      },
+      {
+        "id": "C",
+        "text": "Un constructor especial para StatefulWidgets"
+      },
+      {
+        "id": "D",
+        "text": "Una función que crea estados automáticamente"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "StatefulBuilder es un widget que proporciona una forma más simple de crear un StatefulWidget localizado, especialmente útil para pequeñas partes de la interfaz que necesitan estado dentro de un StatelessWidget más grande, como diálogos.",
+    "category": "Widgets"
+  },
+  {
+    "id": "73",
+    "text": "¿Qué paquete se utiliza comúnmente para almacenar datos persistentes en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "flutter_data"
+      },
+      {
+        "id": "B",
+        "text": "shared_preferences"
+      },
+      {
+        "id": "C",
+        "text": "persistent_storage"
+      },
+      {
+        "id": "D",
+        "text": "flutter_save"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "shared_preferences es un paquete comúnmente utilizado para almacenar datos persistentes simples en Flutter. Permite guardar pares clave-valor como booleanos, strings, números y listas en el almacenamiento del dispositivo.",
+    "category": "Datos"
+  },
+  {
+    "id": "74",
+    "text": "¿Qué es un typedef en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una forma de definir alias para tipos de datos"
+      },
+      {
+        "id": "B",
+        "text": "Una función especial para definir tipos personalizados"
+      },
+      {
+        "id": "C",
+        "text": "Una clase para crear tipos enumerados"
+      },
+      {
+        "id": "D",
+        "text": "Una palabra clave para documentar tipos"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Un typedef en Dart es una forma de definir un alias para un tipo de dato, principalmente utilizado para firmas de funciones. Facilita la lectura y mantenimiento del código al proporcionar nombres significativos a tipos complejos.",
+    "category": "Dart"
+  },
+  {
+    "id": "75",
+    "text": "¿Qué es un Future.delayed en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un Future que nunca se completa"
+      },
+      {
+        "id": "B",
+        "text": "Un Future que se completa después de un tiempo específico"
+      },
+      {
+        "id": "C",
+        "text": "Un método para posponer la ejecución de una función asíncrona"
+      },
+      {
+        "id": "D",
+        "text": "Una clase para manejar operaciones retrasadas"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Future.delayed crea un Future que se completa después de una duración especificada. Es útil para introducir retrasos intencionales en código asíncrono, como simular operaciones de red o crear efectos de temporización.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "76",
+    "text": "¿Qué es un SizedBox en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget que cambia de tamaño automáticamente"
+      },
+      {
+        "id": "B",
+        "text": "Un widget con un tamaño fijo"
+      },
+      {
+        "id": "C",
+        "text": "Un widget para animar cambios de tamaño"
+      },
+      {
+        "id": "D",
+        "text": "Un widget que se adapta al tamaño de la pantalla"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "SizedBox es un widget que tiene un tamaño específico. Se utiliza para dar dimensiones específicas a un widget hijo o para crear espacios en blanco cuando se usa sin hijos (por ejemplo, como separador).",
+    "category": "Widgets"
+  },
+  {
+    "id": "77",
+    "text": "¿Qué método se usa en Flutter para realizar transiciones entre rutas con animaciones personalizadas?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Navigator.pushWithAnimation()"
+      },
+      {
+        "id": "B",
+        "text": "Navigator.customTransition()"
+      },
+      {
+        "id": "C",
+        "text": "Navigator.push() con un PageRouteBuilder"
+      },
+      {
+        "id": "D",
+        "text": "Navigator.animatedPush()"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Para realizar transiciones entre rutas con animaciones personalizadas en Flutter, se utiliza Navigator.push() con un PageRouteBuilder. PageRouteBuilder permite definir las animaciones de transición para la entrada y salida de páginas.",
+    "category": "Navegación"
+  },
+  {
+    "id": "78",
+    "text": "¿Qué es el patrón Provider en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un patrón para optimizar el rendimiento del renderizado"
+      },
+      {
+        "id": "B",
+        "text": "Un patrón para gestionar el estado basado en InheritedWidget"
+      },
+      {
+        "id": "C",
+        "text": "Un patrón para estructurar archivos en un proyecto"
+      },
+      {
+        "id": "D",
+        "text": "Un patrón para crear animaciones fluidas"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Provider es un patrón de gestión de estado en Flutter que utiliza InheritedWidget para propagar datos a través del árbol de widgets. Es una alternativa más simple y estructurada al uso directo de InheritedWidget.",
+    "category": "Arquitectura"
+  },
+  {
+    "id": "79",
+    "text": "En Dart, ¿qué es una colección inmutable?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una colección que no se puede modificar después de su creación"
+      },
+      {
+        "id": "B",
+        "text": "Una colección que solo puede contener tipos primitivos"
+      },
+      {
+        "id": "C",
+        "text": "Una colección con un tamaño fijo"
+      },
+      {
+        "id": "D",
+        "text": "Una colección que se elimina automáticamente cuando no se usa"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Una colección inmutable en Dart es aquella que no se puede modificar después de su creación. Esto significa que no se pueden añadir, eliminar o cambiar elementos. En Dart, se pueden crear colecciones inmutables usando const o métodos como List.unmodifiable().",
+    "category": "Dart"
+  },
+  {
+    "id": "80",
+    "text": "¿Qué widget permite crear una interfaz que se adapta a diferentes orientaciones de pantalla?",
+    "options": [
+      {
+        "id": "A",
+        "text": "OrientationBuilder"
+      },
+      {
+        "id": "B",
+        "text": "ResponsiveLayout"
+      },
+      {
+        "id": "C",
+        "text": "ScreenRotator"
+      },
+      {
+        "id": "D",
+        "text": "AdaptiveWidget"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "OrientationBuilder es un widget que permite construir diferentes layouts dependiendo de la orientación actual de la pantalla (vertical u horizontal). Proporciona la orientación actual y reconstruye su hijo cuando la orientación cambia.",
+    "category": "Widgets"
+  },
+  {
+    "id": "81",
+    "text": "¿Qué es el widget Dismissible en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget que se puede cerrar automáticamente"
+      },
+      {
+        "id": "B",
+        "text": "Un widget que puede ser eliminado deslizándolo"
+      },
+      {
+        "id": "C",
+        "text": "Un widget que desaparece después de un tiempo"
+      },
+      {
+        "id": "D",
+        "text": "Un widget que ignora las interacciones del usuario"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Dismissible es un widget que puede ser eliminado deslizándolo, comúnmente utilizado en listas para eliminar elementos con un gesto de deslizar. Permite definir acciones para diferentes direcciones de deslizamiento.",
+    "category": "Widgets"
+  },
+  {
+    "id": "82",
+    "text": "¿Qué es un mixin en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una clase que no puede ser instanciada"
+      },
+      {
+        "id": "B",
+        "text": "Una forma de reutilizar código en múltiples jerarquías de clases"
+      },
+      {
+        "id": "C",
+        "text": "Un tipo especial de constructor"
+      },
+      {
+        "id": "D",
+        "text": "Una función que mezcla varios objetos"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Un mixin en Dart es una forma de reutilizar código en múltiples jerarquías de clases. A diferencia de la herencia tradicional, los mixins permiten incluir métodos y propiedades de múltiples clases sin crear una relación de herencia completa.",
+    "category": "Dart"
+  },
+  {
+    "id": "83",
+    "text": "¿Qué widget se utiliza para crear un indicador de progreso circular en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "CircleIndicator"
+      },
+      {
+        "id": "B",
+        "text": "RoundProgressBar"
+      },
+      {
+        "id": "C",
+        "text": "CircularProgressIndicator"
+      },
+      {
+        "id": "D",
+        "text": "SpinnerWidget"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "CircularProgressIndicator es un widget de Material Design que muestra un indicador de progreso circular, útil para indicar que una operación está en curso cuando no se conoce la duración exacta.",
+    "category": "Widgets"
+  },
+  {
+    "id": "84",
+    "text": "¿Cómo se implementa el patrón Singleton en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Usando una clase estática"
+      },
+      {
+        "id": "B",
+        "text": "Con un constructor privado y un método estático para obtener la instancia"
+      },
+      {
+        "id": "C",
+        "text": "Con la palabra clave 'singleton'"
+      },
+      {
+        "id": "D",
+        "text": "Extendiendo la clase SingletonBase"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "En Dart, el patrón Singleton se implementa típicamente con un constructor privado (nombrado con un guion bajo al inicio) y un método estático o getter que devuelve una única instancia de la clase, creándola si no existe.",
+    "category": "Dart"
+  },
+  {
+    "id": "85",
+    "text": "¿Qué es un ValueNotifier en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget que notifica a la UI cuando un valor cambia"
+      },
+      {
+        "id": "B",
+        "text": "Una clase que envía notificaciones al sistema operativo"
+      },
+      {
+        "id": "C",
+        "text": "Un tipo especial de BLoC para valores simples"
+      },
+      {
+        "id": "D",
+        "text": "Una función que verifica el valor de una variable"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "ValueNotifier es una implementación simple de ChangeNotifier que almacena un solo valor y notifica a sus oyentes cuando ese valor cambia. Es útil para gestionar estados simples sin necesidad de soluciones más complejas como BLoC.",
+    "category": "Arquitectura"
+  },
+  {
+    "id": "86",
+    "text": "¿Qué hace el widget IgnorePointer en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Oculta el puntero del ratón"
+      },
+      {
+        "id": "B",
+        "text": "Impide que los widgets hijo reciban eventos de interacción"
+      },
+      {
+        "id": "C",
+        "text": "Ignora los errores de punteros nulos"
+      },
+      {
+        "id": "D",
+        "text": "Desactiva el modo puntero en dispositivos táctiles"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "IgnorePointer es un widget que impide que sus widgets hijo reciban eventos de interacción como toques o clics. Es útil para deshabilitar temporalmente partes de la interfaz sin cambiar su apariencia.",
+    "category": "Widgets"
+  },
+  {
+    "id": "87",
+    "text": "¿Qué es un ValueListenableBuilder en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget que construye su árbol basado en un ValueNotifier"
+      },
+      {
+        "id": "B",
+        "text": "Una clase para construir listas de valores"
+      },
+      {
+        "id": "C",
+        "text": "Un constructor especial para ListTile"
+      },
+      {
+        "id": "D",
+        "text": "Una herramienta para depurar notificaciones de valor"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "ValueListenableBuilder es un widget que escucha un ValueListenable (como ValueNotifier) y reconstruye su árbol de widgets cuando el valor cambia. Es una forma eficiente de actualizar solo las partes de la UI que dependen de un valor específico.",
+    "category": "Widgets"
+  },
+  {
+    "id": "88",
+    "text": "¿Qué es un enum en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una clase que enumera sus métodos"
+      },
+      {
+        "id": "B",
+        "text": "Un tipo que representa un conjunto fijo de constantes"
+      },
+      {
+        "id": "C",
+        "text": "Una función que cuenta elementos"
+      },
+      {
+        "id": "D",
+        "text": "Una interfaz para implementar iteradores"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Un enum (enumeración) en Dart es un tipo especial que representa un conjunto fijo de constantes. Es útil para modelar opciones mutuamente excluyentes, como estados, tipos de operaciones o configuraciones.",
+    "category": "Dart"
+  },
+  {
+    "id": "89",
+    "text": "¿Qué es el widget Visibility en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget que controla la opacidad de sus hijos"
+      },
+      {
+        "id": "B",
+        "text": "Un widget que muestra u oculta sus hijos basado en una condición"
+      },
+      {
+        "id": "C",
+        "text": "Un widget que hace invisibles los elementos de la interfaz"
+      },
+      {
+        "id": "D",
+        "text": "Un widget que detecta cuándo un elemento es visible en pantalla"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Visibility es un widget que muestra u oculta sus hijos basado en una condición booleana. A diferencia de usar operadores condicionales directamente, puede mantener el estado y el espacio de sus hijos incluso cuando están ocultos.",
+    "category": "Widgets"
+  },
+  {
+    "id": "90",
+    "text": "¿Qué es un Future<List<T>> en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una lista que se llena en el futuro"
+      },
+      {
+        "id": "B",
+        "text": "Un Future que eventualmente producirá una lista de objetos de tipo T"
+      },
+      {
+        "id": "C",
+        "text": "Una lista de Futures"
+      },
+      {
+        "id": "D",
+        "text": "Un tipo especial para operaciones asíncronas en paralelo"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Un Future<List<T>> en Dart es un Future que eventualmente producirá una lista de objetos de tipo T. Es comúnmente utilizado para operaciones asíncronas que devuelven colecciones de datos, como consultas a bases de datos o solicitudes de API.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "91",
+    "text": "¿Cuál es la función del widget FittedBox en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Redimensionar su hijo para que se ajuste exactamente a sus dimensiones"
+      },
+      {
+        "id": "B",
+        "text": "Crear una caja que se adapta automáticamente a su contenido"
+      },
+      {
+        "id": "C",
+        "text": "Escalar y posicionar su hijo dentro de sí mismo según el BoxFit especificado"
+      },
+      {
+        "id": "D",
+        "text": "Ajustar el tamaño de la fuente del texto para que se adapte"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "FittedBox escala y posiciona su hijo dentro de sí mismo según el BoxFit especificado (como contain, cover, fill, etc.). Es útil para asegurar que un widget se ajuste a un espacio determinado manteniendo proporciones o llenando completamente el espacio.",
+    "category": "Widgets"
+  },
+  {
+    "id": "92",
+    "text": "¿Qué es una clase extension en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una clase que extiende otra clase"
+      },
+      {
+        "id": "B",
+        "text": "Una forma de añadir funcionalidad a clases existentes sin modificarlas"
+      },
+      {
+        "id": "C",
+        "text": "Una clase que solo contiene métodos extendidos"
+      },
+      {
+        "id": "D",
+        "text": "Un tipo especial de mixin"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Una extension en Dart es una forma de añadir funcionalidad a clases existentes sin modificar o extender la clase original. Permite agregar nuevos métodos o propiedades a tipos existentes, incluso a tipos básicos como String o int.",
+    "category": "Dart"
+  },
+  {
+    "id": "93",
+    "text": "¿Qué hace el widget AnimatedBuilder en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Crea automáticamente animaciones basadas en el contenido"
+      },
+      {
+        "id": "B",
+        "text": "Permite reconstruir eficientemente solo las partes de un widget que necesitan ser animadas"
+      },
+      {
+        "id": "C",
+        "text": "Construye widgets con propiedades animadas predefinidas"
+      },
+      {
+        "id": "D",
+        "text": "Genera código de animación en tiempo de ejecución"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "AnimatedBuilder es un widget que permite reconstruir eficientemente solo las partes de un widget que necesitan ser animadas. Toma una animación y un builder, y reconstruye su árbol cuando la animación cambia, sin reconstruir los widgets padres.",
+    "category": "Animación"
+  },
+  {
+    "id": "94",
+    "text": "¿Qué es un CustomPaint en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Una herramienta para personalizar el tema de la aplicación"
+      },
+      {
+        "id": "B",
+        "text": "Un widget que proporciona un canvas para dibujar gráficos personalizados"
+      },
+      {
+        "id": "C",
+        "text": "Una clase para aplicar efectos visuales a imágenes"
+      },
+      {
+        "id": "D",
+        "text": "Un plugin para editar imágenes"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "CustomPaint es un widget que proporciona un canvas sobre el cual se puede dibujar usando un CustomPainter. Permite crear gráficos vectoriales personalizados, diagramas, gráficos o visualizaciones directamente en la interfaz de usuario.",
+    "category": "Gráficos"
+  },
+  {
+    "id": "95",
+    "text": "¿Qué hace el método cuando se sobrescribe didChangeDependencies() en un StatefulWidget?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Se llama cuando las dependencias del widget cambian"
+      },
+      {
+        "id": "B",
+        "text": "Se llama cuando los widget hijos cambian"
+      },
+      {
+        "id": "C",
+        "text": "Se llama cuando se actualizan las dependencias en pubspec.yaml"
+      },
+      {
+        "id": "D",
+        "text": "Se llama para validar las dependencias del widget"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "didChangeDependencies() se llama cuando las dependencias de un State han cambiado. Por ejemplo, si el widget accede a un InheritedWidget (como Theme.of o MediaQuery.of) y ese InheritedWidget cambia, se llamará a este método.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "96",
+    "text": "¿Qué es un ChangeNotifier en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget que notifica a la UI sobre cambios en la red"
+      },
+      {
+        "id": "B",
+        "text": "Una clase que proporciona notificaciones de cambio a sus oyentes"
+      },
+      {
+        "id": "C",
+        "text": "Un servicio del sistema para manejar notificaciones push"
+      },
+      {
+        "id": "D",
+        "text": "Un tipo de evento en el sistema de eventos de Flutter"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "ChangeNotifier es una clase simple que proporciona notificaciones de cambio a sus oyentes. Es parte del patrón de diseño Observable y se utiliza comúnmente con ChangeNotifierProvider en el paquete provider para gestión de estado.",
+    "category": "Arquitectura"
+  },
+  {
+    "id": "97",
+    "text": "¿Qué característica de Dart son las async* y yield?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Permiten crear iteradores síncronos"
+      },
+      {
+        "id": "B",
+        "text": "Se utilizan para definir getters y setters"
+      },
+      {
+        "id": "C",
+        "text": "Permiten crear streams de forma más sencilla"
+      },
+      {
+        "id": "D",
+        "text": "Son operadores para manipulación de bits"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "async* y yield son características de Dart que permiten crear funciones asíncronas generadoras que producen streams. Una función marcada como async* puede usar yield para emitir valores al stream a lo largo del tiempo, simplificando la creación de fuentes de datos asíncronas.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "98",
+    "text": "¿Cuál es la diferencia entre runApp() y MaterialApp en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "No hay diferencia, son términos intercambiables"
+      },
+      {
+        "id": "B",
+        "text": "runApp() es una función que inicia la aplicación, MaterialApp es un widget que configura la aplicación"
+      },
+      {
+        "id": "C",
+        "text": "runApp() es para aplicaciones básicas, MaterialApp para aplicaciones complejas"
+      },
+      {
+        "id": "D",
+        "text": "runApp() es para desarrollo, MaterialApp para producción"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "runApp() es una función que infla un widget dado y lo vincula al árbol de widgets de la pantalla, iniciando efectivamente la aplicación. MaterialApp es un widget que configura varios aspectos de la aplicación, como temas, rutas, localización, etc., siguiendo las directrices de Material Design.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "99",
+    "text": "¿Qué es un método factory en Dart?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un método que crea nuevas instancias de una clase"
+      },
+      {
+        "id": "B",
+        "text": "Un constructor especial que no siempre crea una nueva instancia"
+      },
+      {
+        "id": "C",
+        "text": "Un método para fabricar clases en tiempo de ejecución"
+      },
+      {
+        "id": "D",
+        "text": "Un patrón de diseño implementado en el lenguaje"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Un constructor factory en Dart es un tipo especial de constructor que no siempre crea una nueva instancia. Puede devolver una instancia existente, una instancia de una subclase, o calcular valores para la instancia, ofreciendo más flexibilidad que los constructores normales.",
+    "category": "Dart"
+  },
+  {
+    "id": "100",
+    "text": "¿Qué widget se utiliza para aplicar efectos de desenfoque en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "BlurEffect"
+      },
+      {
+        "id": "B",
+        "text": "BackdropFilter"
+      },
+      {
+        "id": "C",
+        "text": "FrostGlass"
+      },
+      {
+        "id": "D",
+        "text": "BlurryWidget"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "BackdropFilter es un widget que aplica un filtro gráfico a todo lo que está pintado debajo de él. Cuando se usa con un filtro de desenfoque (ImageFilter.blur), puede crear efectos como el vidrio esmerilado o desenfoque de fondo.",
+    "category": "Widgets"
+  },
+  {
+    "id": "101",
+    "text": "¿Qué método se utiliza para registrar un widget para que sea notificado cuando cambie el teclado virtual en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "registerKeyboardListener()"
+      },
+      {
+        "id": "B",
+        "text": "listenKeyboard()"
+      },
+      {
+        "id": "C",
+        "text": "WidgetsBinding.instance.addObserver()"
+      },
+      {
+        "id": "D",
+        "text": "KeyboardNotifier.register()"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Para ser notificado cuando el teclado virtual cambia, un widget debe implementar la interfaz WidgetsBindingObserver y registrarse con WidgetsBinding.instance.addObserver(this). Esto permite al widget recibir llamadas al método didChangeMetrics() cuando cambia el tamaño del teclado.",
+    "category": "Widgets"
+  },
+  {
+    "id": "102",
+    "text": "¿Cuál de las siguientes afirmaciones es correcta sobre el archivo main.dart en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Es obligatorio en todas las aplicaciones Flutter"
+      },
+      {
+        "id": "B",
+        "text": "Es el punto de entrada de la aplicación por convención, pero podría llamarse de otra manera"
+      },
+      {
+        "id": "C",
+        "text": "Debe contener exactamente una clase StatefulWidget"
+      },
+      {
+        "id": "D",
+        "text": "No puede importar otros archivos Dart"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Por convención, main.dart es el punto de entrada de una aplicación Flutter, pero técnicamente podría llamarse de otra manera configurando el punto de entrada en el sistema de compilación. Lo importante es que contenga una función main() que inicie la aplicación.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "103",
+    "text": "¿Qué es el Hot Restart en Flutter y cómo difiere del Hot Reload?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Hot Restart recarga toda la aplicación y pierde el estado, mientras que Hot Reload conserva el estado"
+      },
+      {
+        "id": "B",
+        "text": "Hot Restart solo está disponible en modo de depuración, mientras que Hot Reload funciona en cualquier modo"
+      },
+      {
+        "id": "C",
+        "text": "Hot Restart actualiza solo la UI, mientras que Hot Reload actualiza tanto la UI como la lógica"
+      },
+      {
+        "id": "D",
+        "text": "Son términos intercambiables para la misma funcionalidad"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Hot Restart reinicia completamente la aplicación, recompilando todo el código y perdiendo el estado actual. Hot Reload, por otro lado, conserva el estado de la aplicación y solo actualiza la UI basada en los cambios de código realizados, lo que hace que sea más rápido para el desarrollo iterativo.",
+    "category": "Desarrollo"
+  },
+  {
+    "id": "104",
+    "text": "¿Cuál es el propósito de una clave (Key) en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Encriptar datos sensibles en la aplicación"
+      },
+      {
+        "id": "B",
+        "text": "Identificar widgets específicos en el árbol de widgets para preservar el estado o controlar su actualización"
+      },
+      {
+        "id": "C",
+        "text": "Proporcionar acceso a las API del sistema"
+      },
+      {
+        "id": "D",
+        "text": "Definir constantes globales en la aplicación"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Las claves (Keys) en Flutter se utilizan para identificar widgets específicos en el árbol de widgets. Ayudan al framework a determinar qué widgets deben preservar su estado cuando cambia la estructura del árbol, y son esenciales cuando se trabaja con listas dinámicas o elementos que cambian de posición.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "105",
+    "text": "En Flutter, ¿qué método se utiliza para escribir tests que prueban la interacción del usuario con widgets?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Integration tests"
+      },
+      {
+        "id": "B",
+        "text": "Unit tests"
+      },
+      {
+        "id": "C",
+        "text": "Widget tests"
+      },
+      {
+        "id": "D",
+        "text": "UI tests"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Los Widget tests son el tipo de prueba ideal para verificar la interacción del usuario con widgets específicos. Permiten simular toques, gestos y otras interacciones, y verificar que los widgets responden correctamente, sin necesidad de ejecutar toda la aplicación como en los Integration tests.",
+    "category": "Testing"
+  },
+  {
+    "id": "106",
+    "text": "¿Qué es el widget Builder en Flutter y cuándo debería usarse?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget para construir interfaces de forma dinámica basadas en datos externos"
+      },
+      {
+        "id": "B",
+        "text": "Un widget que compila widgets personalizados"
+      },
+      {
+        "id": "C",
+        "text": "Un widget que permite crear parte de un árbol de widgets en tiempo de ejecución basado en una función"
+      },
+      {
+        "id": "D",
+        "text": "Un widget específico para construir animaciones"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Builder es un widget que permite crear parte de un árbol de widgets en tiempo de ejecución mediante una función builder que recibe un BuildContext. Es útil cuando necesitas acceder a un BuildContext en un nivel específico del árbol de widgets, o cuando quieres crear widgets de forma dinámica basados en condiciones en tiempo de ejecución.",
+    "category": "Widgets"
+  },
+  {
+    "id": "107",
+    "text": "¿Qué técnica se utiliza para implementar la navegación con rutas nombradas en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Navigator.pushNamed(context, '/rutaNombrada')"
+      },
+      {
+        "id": "B",
+        "text": "Router.navigateTo('/rutaNombrada')"
+      },
+      {
+        "id": "C",
+        "text": "Scaffold.navigateNamed('/rutaNombrada')"
+      },
+      {
+        "id": "D",
+        "text": "AppRoute.push('/rutaNombrada')"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Navigator.pushNamed(context, '/rutaNombrada') es el método utilizado para implementar la navegación con rutas nombradas en Flutter. Estas rutas deben estar previamente definidas en el mapa de rutas de MaterialApp o CupertinoApp usando la propiedad 'routes'.",
+    "category": "Navegación"
+  },
+  {
+    "id": "108",
+    "text": "¿Qué es un StatelessWidget inmutable y por qué es importante en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Es un widget que no puede ser modificado después de creado, lo que permite a Flutter optimizar el rendimiento"
+      },
+      {
+        "id": "B",
+        "text": "Es un widget que no puede ser eliminado del árbol de widgets una vez añadido"
+      },
+      {
+        "id": "C",
+        "text": "Es un widget que no puede tener variables de estado"
+      },
+      {
+        "id": "D",
+        "text": "Es un widget que solo puede usarse una vez en la aplicación"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Un StatelessWidget inmutable es un widget que, una vez creado, no cambia su configuración. Esta inmutabilidad es importante porque permite a Flutter optimizar el rendimiento al saber que el widget no necesita ser reconstruido a menos que sus argumentos de entrada cambien. Esto reduce la carga de trabajo del framework durante la fase de renderizado.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "109",
+    "text": "¿Qué patrón se utiliza en Flutter para manejar formularios complejos con validación?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Form + FormField + TextFormField"
+      },
+      {
+        "id": "B",
+        "text": "InputDecorator + TextField"
+      },
+      {
+        "id": "C",
+        "text": "Validator + Input"
+      },
+      {
+        "id": "D",
+        "text": "FormBuilder + ValidationSchema"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Flutter utiliza el patrón Form + FormField + TextFormField para manejar formularios complejos con validación. Form proporciona el contexto para todos los campos, FormField es una clase base para implementar campos de formulario con validación, y TextFormField es una implementación específica para campos de texto que incluye integración de validación y manejo de errores.",
+    "category": "Widgets"
+  },
+  {
+    "id": "110",
+    "text": "¿Cuál es la mejor manera de manejar excepciones asíncronas en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Usar try/catch dentro de bloques async/await"
+      },
+      {
+        "id": "B",
+        "text": "Usar el método onError() en cada Future"
+      },
+      {
+        "id": "C",
+        "text": "Usar GlobalExceptionHandler.register()"
+      },
+      {
+        "id": "D",
+        "text": "Las excepciones asíncronas no necesitan manejo especial"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "La mejor manera de manejar excepciones asíncronas en Flutter es usando bloques try/catch dentro de funciones async/await. Esto permite capturar y manejar las excepciones de manera similar al código síncrono, lo que hace que el código sea más legible y mantenible. También puedes usar catchError() en Futures para el mismo propósito.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "111",
+    "text": "¿Qué es el patrón Repository en Flutter y cuándo se debe utilizar?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un patrón para almacenar assets y recursos en la aplicación"
+      },
+      {
+        "id": "B",
+        "text": "Un patrón que abstrae la fuente de datos y proporciona una API limpia para acceder a ellos"
+      },
+      {
+        "id": "C",
+        "text": "Un patrón para organizar widgets reutilizables"
+      },
+      {
+        "id": "D",
+        "text": "Un patrón de almacenamiento de código fuente para colaboración en equipo"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "El patrón Repository en Flutter es un patrón de diseño que abstrae la lógica de acceso a datos, proporcionando una API limpia para el resto de la aplicación. Se debe utilizar cuando se necesita separar la lógica de negocio de la fuente de datos (API REST, base de datos local, etc.), facilitando cambios en la implementación y permitiendo testing más sencillo.",
+    "category": "Arquitectura"
+  },
+  {
+    "id": "112",
+    "text": "¿Cuál es la diferencia entre el método initState() y el constructor de un StatefulWidget?",
+    "options": [
+      {
+        "id": "A",
+        "text": "No hay diferencia, son intercambiables"
+      },
+      {
+        "id": "B",
+        "text": "initState() se llama cuando el widget se inserta en el árbol, el constructor cuando se crea la instancia"
+      },
+      {
+        "id": "C",
+        "text": "El constructor inicializa propiedades finales, initState() inicializa estado mutable"
+      },
+      {
+        "id": "D",
+        "text": "initState() se llama cada vez que el widget se reconstruye, el constructor solo la primera vez"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "La principal diferencia es que el constructor de la clase State se llama cuando se crea la instancia del estado, mientras que initState() se llama cuando el widget se inserta en el árbol. En initState() ya tienes acceso al contexto y widget heredados, cosa que no ocurre en el constructor. Además, initState() es el lugar adecuado para inicializar suscripciones o controladores.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "113",
+    "text": "¿Qué es un Stream en Flutter y cómo se diferencia de un Future?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Stream es síncrono y Future es asíncrono"
+      },
+      {
+        "id": "B",
+        "text": "Stream emite múltiples valores a lo largo del tiempo, Future emite un solo valor"
+      },
+      {
+        "id": "C",
+        "text": "Stream es para operaciones de red, Future para operaciones locales"
+      },
+      {
+        "id": "D",
+        "text": "Stream es obsoleto, Flutter recomienda usar solo Future"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Un Stream en Flutter es una secuencia de eventos asíncronos que puede emitir múltiples valores a lo largo del tiempo, mientras que un Future representa un único valor asíncrono. Los Streams son ideales para datos que cambian con el tiempo (como actualizaciones de ubicación, eventos de UI o datos en tiempo real), mientras que los Futures son mejores para operaciones que se completan una sola vez.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "114",
+    "text": "¿Qué es el widget LayoutBuilder en Flutter y cuándo deberías usarlo?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget para construir layouts personalizados basados en el tamaño disponible"
+      },
+      {
+        "id": "B",
+        "text": "Un widget para aplicar temas específicos a partes del layout"
+      },
+      {
+        "id": "C",
+        "text": "Un widget para crear layouts automáticos basados en el contenido"
+      },
+      {
+        "id": "D",
+        "text": "Un widget para compilar código de layout optimizado"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "LayoutBuilder es un widget que proporciona las restricciones de tamaño dadas por su padre y permite construir widgets hijo basados en esas restricciones. Deberías usarlo cuando necesites construir un árbol de widgets diferente dependiendo del espacio disponible, lo que es crucial para crear interfaces adaptables a diferentes tamaños de pantalla.",
+    "category": "Widgets"
+  },
+  {
+    "id": "115",
+    "text": "¿Qué son las keys GlobalKey en Flutter y cuándo deberían utilizarse?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Claves para acceder a recursos globales como imágenes o fuentes"
+      },
+      {
+        "id": "B",
+        "text": "Claves únicas globalmente que permiten acceder a información de un widget desde cualquier parte de la aplicación"
+      },
+      {
+        "id": "C",
+        "text": "Claves para definir variables globales en toda la aplicación"
+      },
+      {
+        "id": "D",
+        "text": "Claves generadas automáticamente por Flutter para todos los widgets"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "GlobalKey es un tipo de clave en Flutter que es única globalmente y permite acceder a información sobre un widget específico desde cualquier parte de la aplicación. Se deben utilizar con moderación debido a su costo de rendimiento, y son apropiadas cuando necesitas acceder al estado de un widget desde otro widget que no está directamente conectado en el árbol, o cuando necesitas manipular un widget específico (como Form, Navigator) desde código externo.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "116",
+    "text": "¿Qué es el widget AnimatedSwitcher en Flutter y para qué se utiliza?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un widget para cambiar entre dos temas con animación"
+      },
+      {
+        "id": "B",
+        "text": "Un widget para animar la transición entre dos widgets hijo diferentes"
+      },
+      {
+        "id": "C",
+        "text": "Un widget para implementar interruptores animados en la UI"
+      },
+      {
+        "id": "D",
+        "text": "Un widget para alternar entre modos claro y oscuro"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "AnimatedSwitcher es un widget que anima automáticamente la transición entre diferentes widgets hijo cuando cambia el hijo. Se utiliza para crear transiciones fluidas cuando se reemplaza un widget por otro completamente diferente, como mostrar diferentes pantallas, cambiar entre estados de carga/error/éxito, o actualizar elementos de la UI con animaciones.",
+    "category": "Animación"
+  },
+  {
+    "id": "117",
+    "text": "En Flutter, ¿qué es el método runZonedGuarded() y cuándo deberías usarlo?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un método para ejecutar código en segundo plano con protección contra fallos"
+      },
+      {
+        "id": "B",
+        "text": "Un método para ejecutar código en una zona aislada con un manejador de errores específico"
+      },
+      {
+        "id": "C",
+        "text": "Un método para optimizar el rendimiento de zonas críticas de la aplicación"
+      },
+      {
+        "id": "D",
+        "text": "Un método para validar código antes de ejecutarlo"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "runZonedGuarded() es un método que ejecuta código en una zona aislada con un manejador de errores específico. Deberías usarlo cuando quieras capturar y manejar todas las excepciones no capturadas en tu aplicación, incluyendo errores asíncronos. Es especialmente útil para implementar registro de errores (logging) o enviar informes de fallos a servicios como Firebase Crashlytics.",
+    "category": "Asincronía"
+  },
+  {
+    "id": "118",
+    "text": "¿Cuál es la mejor práctica para manejar imágenes de diferentes resoluciones en Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Usar un único archivo de imagen de alta resolución para todos los dispositivos"
+      },
+      {
+        "id": "B",
+        "text": "Crear múltiples versiones de la imagen con diferentes resoluciones y usar el sistema de assets de Flutter"
+      },
+      {
+        "id": "C",
+        "text": "Usar siempre imágenes vectoriales SVG"
+      },
+      {
+        "id": "D",
+        "text": "Cargar imágenes dinámicamente desde un servidor según la resolución del dispositivo"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "La mejor práctica es crear múltiples versiones de la imagen con diferentes resoluciones (1.0x, 2.0x, 3.0x) y organizarlas en subcarpetas de assets. Flutter seleccionará automáticamente la imagen adecuada según la densidad de píxeles del dispositivo. Esta técnica optimiza el rendimiento y la calidad visual en diferentes dispositivos.",
+    "category": "Assets"
+  },
+  {
+    "id": "119",
+    "text": "¿Qué es un BuildContext en Flutter y por qué es importante?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Un objeto que contiene información sobre la ubicación de un widget en el árbol"
+      },
+      {
+        "id": "B",
+        "text": "Una herramienta para construir widgets personalizados"
+      },
+      {
+        "id": "C",
+        "text": "Un objeto que almacena el historial de cambios en un widget"
+      },
+      {
+        "id": "D",
+        "text": "Una interfaz para acceder a los recursos del sistema"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "BuildContext es un objeto que contiene información sobre la ubicación de un widget en el árbol. Es importante porque permite a los widgets interactuar con sus ancestros (como Theme.of(context) o MediaQuery.of(context)), proporciona acceso a servicios como la navegación (Navigator.of(context)), y es esencial para la ubicación correcta de elementos como diálogos o tooltips.",
+    "category": "Fundamentos"
+  },
+  {
+    "id": "120",
+    "text": "¿Qué es el método didUpdateWidget() en un StatefulWidget y cuándo se llama?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Se llama cuando el widget se reconstruye con diferentes parámetros de configuración"
+      },
+      {
+        "id": "B",
+        "text": "Se llama cuando se modifica manualmente el widget"
+      },
+      {
+        "id": "C",
+        "text": "Se llama cuando el widget termina de renderizarse"
+      },
+      {
+        "id": "D",
+        "text": "Se llama cuando el widget se elimina del árbol"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "didUpdateWidget() es un método del ciclo de vida que se llama cuando un StatefulWidget se reconstruye con diferentes parámetros de configuración. Es útil para responder a cambios en las propiedades del widget, como actualizar el estado interno cuando cambian los parámetros externos. Recibe el widget anterior como parámetro para comparar con el nuevo.",
+    "category": "Fundamentos"
+  }
+]
