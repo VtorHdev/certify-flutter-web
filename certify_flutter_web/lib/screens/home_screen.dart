@@ -6,6 +6,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Calcular ancho disponible para adaptar los cards
+    final screenWidth = MediaQuery.of(context).size.width;
+    final useGrid = screenWidth > 800;
+
     return Center(
       child: SingleChildScrollView(
         padding: const EdgeInsets.all(24.0),
@@ -27,45 +31,103 @@ class HomeScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
-            const Text(
-              'Mejora tus habilidades y prepárate para obtener la certificación oficial de Flutter con nuestra colección de preguntas y exámenes de práctica.',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
+            ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 600),
+              child: const Text(
+                'Mejora tus conocimientos y prepárate para obtener la certificación oficial de Flutter con nuestra colección de preguntas y exámenes de práctica.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16),
+              ),
             ),
             const SizedBox(height: 48),
-            _buildFeatureCard(
-              context,
-              title: 'Modo Estudio',
-              description:
-                  'Estudia por categorías y revisa todas las preguntas con sus respuestas',
-              icon: Icons.book,
-              color: Colors.green,
-              onTap: () => context.go('/study'),
-            ),
-            const SizedBox(height: 16),
-            _buildFeatureCard(
-              context,
-              title: 'Simulacro de Examen',
-              description:
-                  '45 preguntas aleatorias con 90 minutos de tiempo para completar',
-              icon: Icons.quiz,
-              color: Colors.orange,
-              onTap: () => context.go('/exam'),
-            ),
-            const SizedBox(height: 16),
-            _buildFeatureCard(
-              context,
-              title: 'Acerca del Certificado',
-              description:
-                  'Información sobre el examen AFD-200 y consejos para aprobarlo',
-              icon: Icons.info,
-              color: Colors.blue,
-              onTap: () => context.go('/about'),
-            ),
+
+            // Usar un grid o column dependiendo del tamaño de pantalla
+            if (useGrid)
+              ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 1000),
+                child: GridView(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    childAspectRatio: 1.0,
+                    crossAxisSpacing: 16.0,
+                    mainAxisSpacing: 16.0,
+                  ),
+                  children: _buildFeatureCards(context),
+                ),
+              )
+            else
+              Column(
+                children: [
+                  _buildFeatureCard(
+                    context,
+                    title: 'Modo Estudio',
+                    description:
+                        'Estudia por categorías y revisa todas las preguntas con sus explicaciones detalladas',
+                    icon: Icons.book,
+                    color: Colors.green,
+                    onTap: () => context.go('/study'),
+                  ),
+                  const SizedBox(height: 16),
+                  _buildFeatureCard(
+                    context,
+                    title: 'Simulacro de Examen',
+                    description:
+                        '40 preguntas aleatorias con 90 minutos para simular el examen real',
+                    icon: Icons.quiz,
+                    color: Colors.orange,
+                    onTap: () => context.go('/exam'),
+                  ),
+                  const SizedBox(height: 16),
+                  _buildFeatureCard(
+                    context,
+                    title: 'Acerca del Certificado',
+                    description:
+                        'Información sobre el examen AFD-200 y consejos para aprobarlo',
+                    icon: Icons.info,
+                    color: Colors.blue,
+                    onTap: () => context.go('/about'),
+                  ),
+                ],
+              ),
           ],
         ),
       ),
     );
+  }
+
+  // Lista de feature cards para el grid
+  List<Widget> _buildFeatureCards(BuildContext context) {
+    return [
+      _buildFeatureCard(
+        context,
+        title: 'Modo Estudio',
+        description:
+            'Estudia por categorías y revisa todas las preguntas con sus explicaciones detalladas',
+        icon: Icons.book,
+        color: Colors.green,
+        onTap: () => context.go('/study'),
+      ),
+      _buildFeatureCard(
+        context,
+        title: 'Simulacro de Examen',
+        description:
+            '40 preguntas aleatorias con 90 minutos para simular el examen real',
+        icon: Icons.quiz,
+        color: Colors.orange,
+        onTap: () => context.go('/exam'),
+      ),
+      _buildFeatureCard(
+        context,
+        title: 'Acerca del Certificado',
+        description:
+            'Información sobre el examen AFD-200 y consejos para aprobarlo',
+        icon: Icons.info,
+        color: Colors.blue,
+        onTap: () => context.go('/about'),
+      ),
+    ];
   }
 
   Widget _buildFeatureCard(
@@ -85,6 +147,7 @@ class HomeScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(icon, size: 48, color: color),
               const SizedBox(height: 16),
@@ -93,8 +156,14 @@ class HomeScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleLarge,
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 8),
-              Text(description, textAlign: TextAlign.center),
+              const SizedBox(height: 12),
+              Flexible(
+                child: Text(
+                  description,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 14),
+                ),
+              ),
             ],
           ),
         ),

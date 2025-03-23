@@ -122,13 +122,17 @@ class _ExamScreenState extends State<ExamScreen> {
   }
 
   Widget _buildProgressBar(BuildContext context, ExamInProgress state) {
-    final totalQuestions = state.exam.questions.length;
+    final exam = state.exam;
+    final totalQuestions =
+        exam.questions.length; // Será 40 según la configuración
+    final answeredQuestions = state.userAnswers.length;
     final progress = (_currentQuestionIndex + 1) / totalQuestions;
+    final percentComplete = answeredQuestions / totalQuestions;
 
+    // Formato del tiempo restante
     final hours = _timeRemaining.inHours;
     final minutes = _timeRemaining.inMinutes % 60;
     final seconds = _timeRemaining.inSeconds % 60;
-
     final timeText =
         '${hours.toString().padLeft(2, '0')}:'
         '${minutes.toString().padLeft(2, '0')}:'
@@ -136,8 +140,12 @@ class _ExamScreenState extends State<ExamScreen> {
 
     return Container(
       padding: const EdgeInsets.all(16.0),
-      color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.3),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.3),
+        borderRadius: BorderRadius.circular(12),
+      ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -150,24 +158,39 @@ class _ExamScreenState extends State<ExamScreen> {
                 'Tiempo: $timeText',
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   color: _timeRemaining.inMinutes < 10 ? Colors.red : null,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
           LinearProgressIndicator(
             value: progress,
+            backgroundColor: Colors.grey[300],
+            valueColor: AlwaysStoppedAnimation<Color>(
+              Theme.of(context).colorScheme.primary,
+            ),
             minHeight: 10,
             borderRadius: BorderRadius.circular(5),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Respondidas: ${state.userAnswers.length} de $totalQuestions',
+                'Respondidas: $answeredQuestions de $totalQuestions',
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
-              Text('Restantes: ${totalQuestions - state.userAnswers.length}'),
+              Text(
+                'Progreso: ${(percentComplete * 100).round()}%',
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             ],
           ),
         ],
