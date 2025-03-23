@@ -18,102 +18,38 @@
 
     <meta charset="UTF-8" />
     <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta
-      name="description"
-      content="Aplicación web para preparación de certificación Flutter AFD-200."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A new Flutter project." />
 
     <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="Certify Flutter AFD-200" />
+    <meta name="apple-mobile-web-app-title" content="certify_flutter_web" />
     <link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png" />
 
-    <title>Certify Flutter AFD-200</title>
+    <title>certify_flutter_web</title>
     <link rel="manifest" href="manifest.json" />
 
-    <style>
-      .loading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: white;
-        font-family: Arial, sans-serif;
-      }
-      .loading-content {
-        text-align: center;
-      }
-      .spinner {
-        width: 50px;
-        height: 50px;
-        border: 3px solid #0175c2;
-        border-radius: 50%;
-        border-top-color: transparent;
-        animation: spin 1s linear infinite;
-        margin: 0 auto 20px auto;
-      }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      .loading-text {
-        color: #0175c2;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="loading" id="loading">
-      <div class="loading-content">
-        <div class="spinner"></div>
-        <p class="loading-text">Cargando aplicación...</p>
-      </div>
-    </div>
-
-    <!-- Este es el enfoque más simple y funcional para Flutter web en GitHub Pages -->
-    <script src="flutter.js"></script>
     <script>
+      // El nombre del service worker podría ser diferente si estás usando workbox o alguna otra herramienta.
       window.addEventListener("load", function () {
-        // Función para ocultar el indicador de carga
-        function hideLoading() {
-          var loading = document.getElementById("loading");
-          if (loading) {
-            loading.remove();
-          }
-        }
+        var loadingError = false;
 
-        // Registrar evento para cuando Flutter esté listo
-        window.addEventListener("flutter-first-frame", hideLoading);
-
-        // En caso de error, mostrar mensaje después de 10 segundos
+        // Verificador de carga
         setTimeout(function () {
-          var loading = document.getElementById("loading");
-          if (loading) {
-            loading.innerHTML =
-              '<div class="loading-content"><p style="color: #d32f2f;">Error al cargar la aplicación.</p><button onclick="location.reload()" style="padding: 10px 20px; background-color: #0175C2; color: white; border: none; border-radius: 4px; cursor: pointer;">Reintentar</button></div>';
+          if (document.body.children.length <= 1) {
+            console.error("La aplicación no se ha cargado correctamente");
+            loadingError = true;
+            document.body.innerHTML =
+              '<div style="text-align: center; padding: 20px;">Error al cargar la aplicación. Por favor, intente recargar la página.</div>';
           }
         }, 10000);
-
-        // Inicializar Flutter
-        _flutter.loader.loadEntrypoint({
-          onEntrypointLoaded: async function (engineInitializer) {
-            let appRunner = await engineInitializer.initializeEngine();
-            appRunner.runApp();
-          },
-        });
       });
     </script>
+  </head>
+  <body>
+    <script src="flutter_bootstrap.js" async></script>
   </body>
 </html>
