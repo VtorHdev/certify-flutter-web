@@ -93,7 +93,13 @@ certify_flutter_web/
 
 ## 📝 Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+Este proyecto está bajo la Licencia GNU General Public License v3.0 (GPL-3.0). Esto significa que:
+
+- Tienes libertad para usar, modificar y distribuir el software
+- Si distribuyes versiones modificadas, debes hacerlo bajo la misma licencia GPL-3.0
+- Debes incluir el código fuente o hacerlo disponible cuando distribuyas el software
+
+Consulta el archivo LICENSE para más detalles.
 
 ---
 
