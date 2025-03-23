@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter/foundation.dart';
 import '../screens/home_screen.dart';
 import '../screens/study_screen.dart';
 import '../screens/exam_intro_screen.dart';
@@ -60,12 +61,23 @@ class AppRouter {
         ],
       ),
     ],
+    debugLogDiagnostics: kDebugMode,
     errorBuilder:
         (context, state) => Scaffold(
           body: Center(
-            child: Text(
-              'Error: Ruta no encontrada: ${state.uri.path}',
-              style: Theme.of(context).textTheme.titleLarge,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Error: Ruta no encontrada: ${state.uri.path}',
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () => context.go('/'),
+                  child: const Text('Volver al Inicio'),
+                ),
+              ],
             ),
           ),
         ),

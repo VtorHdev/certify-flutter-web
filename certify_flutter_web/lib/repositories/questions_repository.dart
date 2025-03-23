@@ -1,5 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart';
+import 'package:http/http.dart' as http;
 import '../models/question.dart';
 import '../models/exam.dart';
 
@@ -15,16 +17,48 @@ class QuestionsRepository {
     }
 
     try {
-      // Cargar desde assets para desarrollo local
-      final jsonString = await rootBundle.loadString(
-        'assets/data/questions.json',
-      );
+      String jsonString;
+
+      // Para entornos web en producción (como GitHub Pages), intentamos usar la ruta absoluta
+      if (kIsWeb) {
+        try {
+          // Intenta obtener el asset usando HTTP para entornos web
+          final basePath = Uri.base.toString();
+          final assetUrl = '${basePath}assets/assets/data/questions.json';
+          debugPrint('Intentando cargar preguntas desde: $assetUrl');
+
+          final response = await http.get(Uri.parse(assetUrl));
+          if (response.statusCode == 200) {
+            jsonString = response.body;
+            debugPrint('Preguntas cargadas exitosamente via HTTP');
+          } else {
+            // Si falla, intenta con el método estándar
+            jsonString = await rootBundle.loadString(
+              'assets/data/questions.json',
+            );
+            debugPrint(
+              'Preguntas cargadas vía rootBundle después de fallar HTTP',
+            );
+          }
+        } catch (httpError) {
+          debugPrint('Error cargando via HTTP: $httpError');
+          // Si falla el HTTP, intentamos con rootBundle
+          jsonString = await rootBundle.loadString(
+            'assets/data/questions.json',
+          );
+        }
+      } else {
+        // Para entornos no web, usamos el método estándar
+        jsonString = await rootBundle.loadString('assets/data/questions.json');
+      }
+
       final List<dynamic> jsonList = json.decode(jsonString);
       _questions = jsonList.map((json) => Question.fromJson(json)).toList();
       _updateCategories();
+      debugPrint('Cargadas ${_questions.length} preguntas exitosamente');
       return _questions;
     } catch (e) {
-      print('Error cargando preguntas: $e');
+      debugPrint('Error cargando preguntas: $e');
       // Si no puede cargar desde assets, intenta cargar un conjunto de preguntas de muestra
       _loadSampleQuestions();
       return _questions;
