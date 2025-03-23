@@ -17,22 +17,53 @@ class QuestionsRepository {
     }
 
     try {
-      String jsonString;
+      String jsonString = '';
 
       // Para entornos web en producción (como GitHub Pages), intentamos usar la ruta absoluta
       if (kIsWeb) {
         try {
-          // Intenta obtener el asset usando HTTP para entornos web
-          final basePath = Uri.base.toString();
-          final assetUrl = '${basePath}assets/assets/data/questions.json';
-          debugPrint('Intentando cargar preguntas desde: $assetUrl');
+          // Obtener path base actual (importante para GitHub Pages)
+          final baseUri = Uri.base;
+          final pathSegments = [...baseUri.pathSegments];
 
-          final response = await http.get(Uri.parse(assetUrl));
-          if (response.statusCode == 200) {
-            jsonString = response.body;
-            debugPrint('Preguntas cargadas exitosamente via HTTP');
-          } else {
-            // Si falla, intenta con el método estándar
+          // Eliminar segmentos vacíos
+          if (pathSegments.isNotEmpty && pathSegments.last.isEmpty) {
+            pathSegments.removeLast();
+          }
+
+          // Construir URL considerando la estructura de GitHub Pages
+          final basePath = '${baseUri.scheme}://${baseUri.host}';
+          final path =
+              pathSegments.isNotEmpty
+                  ? '$basePath/${pathSegments.join('/')}'
+                  : basePath;
+
+          // Intentar varias rutas posibles para encontrar el archivo JSON
+          final possiblePaths = [
+            '$path/assets/data/questions.json',
+            '$path/assets/assets/data/questions.json',
+          ];
+
+          bool loaded = false;
+          for (final assetUrl in possiblePaths) {
+            debugPrint('Intentando cargar preguntas desde: $assetUrl');
+            try {
+              final response = await http.get(Uri.parse(assetUrl));
+              if (response.statusCode == 200) {
+                jsonString = response.body;
+                debugPrint(
+                  'Preguntas cargadas exitosamente via HTTP desde: $assetUrl',
+                );
+                loaded = true;
+                break;
+              }
+            } catch (e) {
+              debugPrint('Error al intentar cargar desde $assetUrl: $e');
+            }
+          }
+
+          // Si ninguna de las rutas HTTP funcionó, intentamos con rootBundle
+          if (!loaded) {
             jsonString = await rootBundle.loadString(
               'assets/data/questions.json',
             );

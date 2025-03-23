@@ -18,38 +18,74 @@
 
     <meta charset="UTF-8" />
     <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta name="description" content="A new Flutter project." />
+    <meta
+      name="description"
+      content="Aplicación web para preparación de certificación Flutter AFD-200."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- iOS meta tags & icons -->
     <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="certify_flutter_web" />
+    <meta name="apple-mobile-web-app-title" content="Certify Flutter AFD-200" />
     <link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png" />
 
-    <title>certify_flutter_web</title>
+    <title>Certify Flutter AFD-200</title>
     <link rel="manifest" href="manifest.json" />
 
     <script>
-      // El nombre del service worker podría ser diferente si estás usando workbox o alguna otra herramienta.
+      // Configuración de Service Worker y manejo de errores
       window.addEventListener("load", function () {
-        var loadingError = false;
+        var loadingIndicator = document.createElement("div");
+        loadingIndicator.id = "loading-indicator";
+        loadingIndicator.style.cssText =
+          "position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; align-items: center; background-color: #FFFFFF; z-index: 9999;";
+        loadingIndicator.innerHTML =
+          '<div style="text-align: center;"><div style="width: 50px; height: 50px; border: 3px solid #0175C2; border-radius: 50%; border-top-color: transparent; animation: spin 1s linear infinite;"></div><p style="margin-top: 20px; color: #0175C2;">Cargando aplicación...</p></div>';
+        document.body.appendChild(loadingIndicator);
+
+        // Estilo para animación
+        var style = document.createElement("style");
+        style.innerHTML =
+          "@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }";
+        document.head.appendChild(style);
 
         // Verificador de carga
         setTimeout(function () {
-          if (document.body.children.length <= 1) {
+          var loadingIndicator = document.getElementById("loading-indicator");
+          if (loadingIndicator && document.body.children.length <= 2) {
             console.error("La aplicación no se ha cargado correctamente");
-            loadingError = true;
-            document.body.innerHTML =
-              '<div style="text-align: center; padding: 20px;">Error al cargar la aplicación. Por favor, intente recargar la página.</div>';
+            loadingIndicator.innerHTML =
+              '<div style="text-align: center; padding: 20px;"><p>Error al cargar la aplicación.</p><button onclick="location.reload()" style="padding: 10px 20px; background-color: #0175C2; color: white; border: none; border-radius: 4px; cursor: pointer;">Reintentar</button></div>';
           }
-        }, 10000);
+        }, 15000);
       });
     </script>
   </head>
   <body>
-    <script src="flutter_bootstrap.js" async></script>
+    <script>
+      // Esta función ayuda a verificar y corregir problemas de base path
+      window.flutterWebRenderer = "canvaskit";
+    </script>
+    <script src="flutter.js" defer></script>
+    <script>
+      window.addEventListener("load", function () {
+        // Iniciar Flutter una vez que flutter.js esté cargado
+        _flutter.loader.loadEntrypoint({
+          serviceWorker: {
+            serviceWorkerVersion: "1768773470",
+          },
+          onEntrypointLoaded: function (engineInitializer) {
+            engineInitializer.initializeEngine().then(function (appRunner) {
+              appRunner.runApp();
+            });
+          },
+        });
+      });
+    </script>
   </body>
 </html>

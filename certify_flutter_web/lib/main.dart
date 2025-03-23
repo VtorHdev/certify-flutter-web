@@ -7,9 +7,21 @@ import 'package:certify_flutter_web/blocs/exam/exam_bloc.dart';
 import 'package:certify_flutter_web/repositories/questions_repository.dart';
 import 'package:certify_flutter_web/routes/app_router.dart';
 import 'package:url_strategy/url_strategy.dart';
+import 'package:flutter/foundation.dart';
 
 void main() {
+  // Elimina el "#" de las URLs en la web
   setPathUrlStrategy();
+
+  // Habilita logs detallados en modo desarrollo
+  if (kDebugMode) {
+    debugPrint = (String? message, {int? wrapWidth}) {
+      if (message != null) {
+        debugPrintSynchronously(message, wrapWidth: wrapWidth);
+      }
+    };
+  }
+
   runApp(const MyApp());
 }
 

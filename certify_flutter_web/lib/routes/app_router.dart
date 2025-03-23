@@ -62,6 +62,12 @@ class AppRouter {
       ),
     ],
     debugLogDiagnostics: kDebugMode,
+    redirect: (context, state) {
+      if (kIsWeb && !_isValidPath(state.matchedLocation)) {
+        return '/';
+      }
+      return null;
+    },
     errorBuilder:
         (context, state) => Scaffold(
           body: Center(
@@ -82,4 +88,21 @@ class AppRouter {
           ),
         ),
   );
+
+  static bool _isValidPath(String path) {
+    final validPaths = ['/', '/study', '/exam', '/about'];
+
+    if (validPaths.contains(path)) {
+      return true;
+    }
+
+    if (path.startsWith('/study/category/') ||
+        path.startsWith('/study/question/') ||
+        path.startsWith('/exam/start') ||
+        path.startsWith('/exam/result')) {
+      return true;
+    }
+
+    return false;
+  }
 }
