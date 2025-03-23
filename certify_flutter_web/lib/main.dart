@@ -6,8 +6,10 @@ import 'package:certify_flutter_web/blocs/questions/questions_bloc.dart';
 import 'package:certify_flutter_web/blocs/exam/exam_bloc.dart';
 import 'package:certify_flutter_web/repositories/questions_repository.dart';
 import 'package:certify_flutter_web/routes/app_router.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const MyApp());
 }
 
