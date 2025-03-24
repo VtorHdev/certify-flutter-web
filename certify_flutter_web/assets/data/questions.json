@@ -326,31 +326,6 @@
     "category": "Widgets"
   },
   {
-    "id": "14",
-    "text": "¿Qué es Flutter Web?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Un navegador web creado con Flutter"
-      },
-      {
-        "id": "B",
-        "text": "Una plataforma para desarrollar aplicaciones web utilizando Flutter"
-      },
-      {
-        "id": "C",
-        "text": "Un plugin para ejecutar código JavaScript en Flutter"
-      },
-      {
-        "id": "D",
-        "text": "Un framework complementario para crear APIs RESTful"
-      }
-    ],
-    "correctOptionId": "B",
-    "explanation": "Flutter Web es una plataforma que permite compilar aplicaciones Flutter para ejecutarse en navegadores web, utilizando los mismos widgets y código que se usa para aplicaciones móviles.",
-    "category": "Plataformas"
-  },
-  {
     "id": "16",
     "text": "¿Qué hace el método dispose() en un State de StatefulWidget?",
     "options": [
@@ -451,31 +426,6 @@
     "category": "Asincronía"
   },
   {
-    "id": "20",
-    "text": "¿Qué es un CustomPainter en Flutter?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Una herramienta para personalizar la apariencia de los widgets estándar"
-      },
-      {
-        "id": "B",
-        "text": "Una clase que permite dibujar gráficos personalizados utilizando el lienzo (Canvas) de Flutter"
-      },
-      {
-        "id": "C",
-        "text": "Un widget para cambiar el tema de la aplicación"
-      },
-      {
-        "id": "D",
-        "text": "Un constructor para crear widgets con estilos predefinidos"
-      }
-    ],
-    "correctOptionId": "B",
-    "explanation": "CustomPainter es una clase abstracta que define operaciones de pintura personalizadas. Se implementa para crear gráficos personalizados utilizando el objeto Canvas de Flutter y sus métodos de dibujo.",
-    "category": "Widgets"
-  },
-  {
     "id": "21",
     "text": "¿Qué widget se utiliza para crear un botón con un icono en Flutter?",
     "options": [
@@ -556,11 +506,11 @@
     "options": [
       {
         "id": "A",
-        "text": "ListView"
+        "text": "ListWidget"
       },
       {
         "id": "B",
-        "text": "ListView.builder"
+        "text": "ListView"
       },
       {
         "id": "C",
@@ -573,31 +523,6 @@
     ],
     "correctOptionId": "B",
     "explanation": "ListView.builder es ideal para listas potencialmente infinitas ya que construye los elementos solo cuando son visibles en pantalla, lo que mejora significativamente el rendimiento para listas grandes.",
-    "category": "Widgets"
-  },
-  {
-    "id": "25",
-    "text": "¿Cómo se implementa un sistema de pestañas usando DefaultTabController en Flutter?",
-    "options": [
-      {
-        "id": "A",
-        "text": "DefaultTabController → Scaffold → TabBar en appBar → TabBarView en body"
-      },
-      {
-        "id": "B",
-        "text": "DefaultTabController → TabBar → TabBarView"
-      },
-      {
-        "id": "C",
-        "text": "Scaffold → DefaultTabController → TabBar → TabBarView"
-      },
-      {
-        "id": "D",
-        "text": "MaterialApp → DefaultTabController → TabBar"
-      }
-    ],
-    "correctOptionId": "A",
-    "explanation": "Para implementar un sistema de pestañas con DefaultTabController: 1) Se envuelve el Scaffold con DefaultTabController, 2) Se coloca TabBar en el AppBar del Scaffold, 3) Se coloca TabBarView en el body del Scaffold. DefaultTabController sincroniza automáticamente el TabBar y TabBarView.",
     "category": "Widgets"
   },
   {
@@ -752,7 +677,7 @@
   },
   {
     "id": "32",
-    "text": "¿Qué widget se debe utilizar para crear una cuadrícula de elementos con tamaño fijo en Flutter?",
+    "text": "¿Qué widget se debe utilizar para crear una cuadrícula de un número fijo de elementos en Flutter?",
     "options": [
       {
         "id": "A",
@@ -3124,5 +3049,518 @@
     "correctOptionId": "B",
     "explanation": "La declaración break en Dart se utiliza para terminar la ejecución del bucle (for, while, do-while) o la estructura switch actual, transfiriendo el control al código que sigue inmediatamente después de esa estructura. En bucles anidados, break solo termina el bucle más interno a menos que se use con una etiqueta.",
     "category": "Dart"
+  },
+  {
+    "id": "176",
+    "text": "El siguiente código se utiliza para añadir un botón de acción flotante a una interfaz de aplicación Flutter. ¿Cuál de las siguientes funciones o métodos se puede utilizar para añadir una acción a este botón si el usuario de la aplicación lo toca?",
+    "codeSnippet": "floatingActionButton: FloatingActionButton(\nchild: Icon(Icons.phone),\n),",
+    "options": [
+      {
+        "id": "A",
+        "text": "GoTo"
+      },
+      {
+        "id": "B",
+        "text": "onPressed"
+      },
+      {
+        "id": "C",
+        "text": "JumupNow"
+      },
+      {
+        "id": "D",
+        "text": "flyTo"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "El método onPressed es el utilizado en Flutter para manejar eventos de toque en botones, incluyendo FloatingActionButton. Este método recibe una función callback que se ejecutará cuando el usuario toque el botón.",
+    "category": "Widgets"
+  },
+  {
+    "id": "177",
+    "text": "Añadir un widget Slider en una interfaz de aplicación Flutter debe usarse para seleccionar múltiples valores al mismo tiempo.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Verdadero"
+      },
+      {
+        "id": "B",
+        "text": "Falso"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Falso. El widget Slider en Flutter está diseñado para seleccionar un único valor dentro de un rango continuo. Para seleccionar múltiples valores, se debería utilizar el widget RangeSlider que permite seleccionar un rango con valores mínimo y máximo, o implementar múltiples Sliders independientes.",
+    "category": "Widgets"
+  },
+  {
+    "id": "178",
+    "text": "Este widget de Flutter se utiliza para alternar el estado on/off de una única configuración. ¿Cuál de las siguientes opciones representa esta definición?",
+    "options": [
+      {
+        "id": "A",
+        "text": "onOff Widget"
+      },
+      {
+        "id": "B",
+        "text": "SlideA Widget"
+      },
+      {
+        "id": "C",
+        "text": "noYes Widget"
+      },
+      {
+        "id": "D",
+        "text": "Switch Widget"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "El Switch Widget en Flutter se utiliza para alternar entre estados activado/desactivado (on/off) de una configuración única. Es un componente de interfaz de usuario común que permite a los usuarios cambiar una configuración booleana de manera visual mediante un deslizador que muestra claramente cuando está activado o desactivado.",
+    "category": "Widgets"
+  },
+  {
+    "id": "179",
+    "text": "Un plug-in se utiliza para introducir la fecha en la interfaz de tu aplicación Flutter en lugar de pedir al usuario de la aplicación que la añada manualmente. ¿Cuál de las siguientes opciones representa esta definición?",
+    "options": [
+      {
+        "id": "A",
+        "text": "DateInsert() widget"
+      },
+      {
+        "id": "B",
+        "text": "Date Picker plug-in"
+      },
+      {
+        "id": "C",
+        "text": "Date Dialog plug-in"
+      },
+      {
+        "id": "D",
+        "text": "Date Mark plug-in"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "El Date Picker plug-in (o showDatePicker en Flutter) es el componente utilizado para permitir a los usuarios seleccionar una fecha de forma visual e interactiva, en lugar de tener que introducirla manualmente. Este widget muestra un calendario intuitivo donde el usuario puede navegar entre meses y años para seleccionar una fecha específica.",
+    "category": "Widgets"
+  },
+  {
+    "id": "180",
+    "text": "Para configurar un CheckboxGroup o un RadioButtonGroup en una aplicación Flutter, primero debes establecer las configuraciones que se ilustran en la imagen de esta pregunta. ¿Cuál es el nombre del archivo que incluye estas configuraciones?",
+    "codeSnippet": "dependencies:\n  flutter:\n    sdk: flutter\n  grouped_buttons: ^1.0.4",
+    "options": [
+      {
+        "id": "A",
+        "text": "README.md"
+      },
+      {
+        "id": "B",
+        "text": "AndroidManifest.xml"
+      },
+      {
+        "id": "C",
+        "text": "pubspec.yaml"
+      },
+      {
+        "id": "D",
+        "text": "gradlew.bat"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "El archivo pubspec.yaml es donde se declaran todas las dependencias de un proyecto Flutter. Es en este archivo donde se añaden los paquetes externos como 'grouped_buttons' que se utilizarán en la aplicación. Este archivo también contiene metadatos del proyecto, configuración de assets, fuentes y otras propiedades del proyecto.",
+    "category": "Flutter"
+  },
+  {
+    "id": "181",
+    "text": "Después de crear una aplicación Flutter, necesitas configurar un icono para tu aplicación.\nLa pregunta es:\nSi configuras un icono de aplicación en tu código Android de esta aplicación Flutter, el icono de tu código iOS para la misma aplicación Flutter se añadirá automáticamente.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Verdadero"
+      },
+      {
+        "id": "B",
+        "text": "Falso"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Falso. Flutter utiliza el enfoque de código nativo para cada plataforma, por lo que los iconos deben configurarse por separado para Android e iOS. El icono de Android se configura en android/app/src/main/res/, mientras que el icono de iOS se configura en ios/Runner/Assets.xcassets/AppIcon.appiconset/. Existen paquetes como flutter_launcher_icons que pueden facilitar este proceso, pero la configuración sigue siendo específica para cada plataforma.",
+    "category": "Flutter"
+  },
+  {
+    "id": "182",
+    "text": "Selecciona la opción correcta para completar la siguiente frase: El widget SnackBar se utiliza si quieres que tu aplicación muestre un mensaje............... en la parte inferior de la interfaz de tu aplicación.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Durante unos segundos"
+      },
+      {
+        "id": "B",
+        "text": "Para siempre"
+      },
+      {
+        "id": "C",
+        "text": "Hasta que el usuario de la aplicación pulse el botón de cierre de este mensaje"
+      },
+      {
+        "id": "D",
+        "text": "Hasta que el usuario de la aplicación pulse el botón OK del mensaje"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "El widget SnackBar en Flutter se utiliza para mostrar mensajes temporales que aparecen en la parte inferior de la pantalla durante unos segundos y luego desaparecen automáticamente. Aunque se puede personalizar la duración con el parámetro 'duration', el comportamiento predeterminado es que sean temporales y no requieran interacción del usuario para desaparecer.",
+    "category": "Widgets"
+  },
+  {
+    "id": "183",
+    "text": "Un widget Stateful es un widget dinámico que puede cambiar la apariencia de su contenido en respuesta a eventos desencadenados por las interacciones del usuario o cuando recibe datos.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Verdadero"
+      },
+      {
+        "id": "B",
+        "text": "Falso"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Verdadero. Un StatefulWidget en Flutter es un widget dinámico que puede reconstruirse y actualizar su apariencia en respuesta a eventos, como interacciones del usuario o cambios en los datos. Estos widgets mantienen un estado que puede cambiar durante su ciclo de vida, a diferencia de los StatelessWidget que son inmutables.",
+    "category": "Widgets"
+  },
+  {
+    "id": "184",
+    "text": "¿Cuántos widgets hijos se pueden añadir al widget Container?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Widgets hijos ilimitados"
+      },
+      {
+        "id": "B",
+        "text": "Solo un widget hijo"
+      },
+      {
+        "id": "C",
+        "text": "Dos widgets hijos"
+      },
+      {
+        "id": "D",
+        "text": "Tres widgets hijos"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "El widget Container en Flutter solo puede tener un único widget hijo. Si necesitas añadir múltiples widgets dentro de un Container, debes usar un widget de layout como Column, Row o Stack como el hijo del Container, y luego añadir múltiples widgets como hijos de ese widget de layout.",
+    "category": "Widgets"
+  },
+  {
+    "id": "185",
+    "text": "¿Qué propiedad deberías usar para añadir una etiqueta, un icono y un texto de sugerencia en línea al widget TextField?",
+    "options": [
+      {
+        "id": "A",
+        "text": "ListView"
+      },
+      {
+        "id": "B",
+        "text": "InputDecoration"
+      },
+      {
+        "id": "C",
+        "text": "SizeBox"
+      },
+      {
+        "id": "D",
+        "text": "shrinkWrap: true"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "En Flutter, se utiliza la propiedad 'decoration' del widget TextField con un objeto InputDecoration para añadir elementos como etiquetas (label), iconos (icon) y textos de sugerencia (hintText). Este objeto permite personalizar completamente la apariencia del campo de texto con varios elementos visuales y ayudas para el usuario.",
+    "category": "Widgets"
+  },
+  {
+    "id": "186",
+    "text": "Puedes añadir o importar una nueva fuente a tu Flutter colocando el archivo de fuente en una carpeta de fuentes en tu proyecto Flutter sin necesidad de declarar este archivo de fuente o la carpeta de fuentes en pubspec.yaml. ¿Es esto correcto?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Verdadero"
+      },
+      {
+        "id": "B",
+        "text": "Falso"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Falso. Para utilizar fuentes personalizadas en Flutter, no solo debes colocar los archivos de fuente en una carpeta del proyecto, sino que también es obligatorio declararlos en el archivo pubspec.yaml en la sección 'fonts'. Esto permite que Flutter reconozca y registre las fuentes para su uso en la aplicación.",
+    "category": "Flutter"
+  },
+  {
+    "id": "187",
+    "text": "Si instalas el SDK de Flutter en tu ordenador y lo configuras como un plug-in para Android Studio u otro software IDE, Android Studio podrá crear aplicaciones Flutter.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Verdadero"
+      },
+      {
+        "id": "B",
+        "text": "Falso"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Verdadero. Una vez que el SDK de Flutter está instalado en tu ordenador y configurado como un plugin para Android Studio (o cualquier otro IDE compatible), Android Studio puede crear y gestionar aplicaciones Flutter. Esto se hace instalando el plugin de Flutter y Dart desde el marketplace de plugins de Android Studio, lo que añade soporte para crear proyectos Flutter, ejecutarlos y depurarlos directamente desde el IDE.",
+    "category": "Flutter"
+  },
+  {
+    "id": "188",
+    "text": "Este widget se utiliza para envolver un Column, Row, Container u otros widgets. Este widget añade un tamaño de relleno alrededor del widget hijo. ¿A cuál de los siguientes términos corresponde esta definición?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Image"
+      },
+      {
+        "id": "B",
+        "text": "SnackBar"
+      },
+      {
+        "id": "C",
+        "text": "Padding"
+      },
+      {
+        "id": "D",
+        "text": "AlertDialog"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "El widget Padding en Flutter se utiliza para añadir espacio (relleno) alrededor de su widget hijo. Es muy útil para crear márgenes internos y espaciado entre elementos de la interfaz. El Padding acepta un parámetro 'padding' que puede ser configurado con EdgeInsets para especificar cuánto espacio añadir en cada lado del widget hijo.",
+    "category": "Widgets"
+  },
+  {
+    "id": "189",
+    "text": "Si quieres crear una aplicación Flutter usando un ordenador Mac, necesitas instalar Android Studio u otro software IDE y otro software prerrequisito Flutter SDK. Sin embargo, solo puedes probar tus aplicaciones Flutter usando un emulador de iPhone.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Verdadero"
+      },
+      {
+        "id": "B",
+        "text": "Falso"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Falso. Aunque es cierto que necesitas instalar el SDK de Flutter y un IDE como Android Studio para desarrollar aplicaciones Flutter en Mac, puedes probar tus aplicaciones tanto en emuladores de iPhone (usando Xcode) como en emuladores de Android (usando Android Studio). Un Mac permite desarrollar y probar aplicaciones para ambas plataformas.",
+    "category": "Flutter"
+  },
+  {
+    "id": "190",
+    "text": "Este widget te ayuda a tener un ancho y/o alto específico entre widgets. ¿A cuál de los siguientes términos corresponde esta definición?",
+    "options": [
+      {
+        "id": "A",
+        "text": "AppBar"
+      },
+      {
+        "id": "B",
+        "text": "SizedBox"
+      },
+      {
+        "id": "C",
+        "text": "SafeArea"
+      },
+      {
+        "id": "D",
+        "text": "onChanged"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "El widget SizedBox en Flutter se utiliza para crear un espacio con dimensiones específicas entre widgets. Permite establecer un ancho y/o alto fijo, lo que es útil para crear espaciado consistente en la interfaz de usuario. También puede usarse vacío (sin hijo) como un simple espaciador con dimensiones definidas.",
+    "category": "Widgets"
+  },
+  {
+    "id": "191",
+    "text": "Cuando construyes una aplicación Flutter, puedes usar un emulador de Android o iPhone para probar la interfaz de usuario (UI) de tu aplicación y su flujo de trabajo. Pero NO puedes probar esta aplicación en un dispositivo Android o iPhone real antes de publicar tu aplicación en la tienda de Apple o Google.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Verdadero"
+      },
+      {
+        "id": "B",
+        "text": "Falso"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Falso. Flutter permite probar aplicaciones en dispositivos físicos reales antes de publicarlas en las tiendas. Para Android, puedes habilitar el modo desarrollador en el dispositivo y conectarlo por USB. Para iOS, necesitas una cuenta de desarrollador de Apple y configurar el dispositivo en Xcode. Esta práctica es altamente recomendada para verificar el rendimiento y la experiencia de usuario en hardware real.",
+    "category": "Flutter"
+  },
+  {
+    "id": "192",
+    "text": "En el desarrollo con Flutter, puedes añadir tres filas (Row) dentro de una columna (Column) y añadir una imagen dentro de cada fila.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Verdadero"
+      },
+      {
+        "id": "B",
+        "text": "Falso"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Verdadero. En Flutter puedes anidar widgets de layout como Row dentro de Column. Es una práctica común crear una Column que contenga múltiples Row como hijos, y dentro de cada Row puedes añadir widgets Image u otros componentes. Esta flexibilidad en la composición de widgets es una de las fortalezas del sistema de diseño de Flutter.",
+    "category": "Widgets"
+  },
+  {
+    "id": "193",
+    "text": "Flutter funciona con muchas herramientas de desarrollo que son compatibles con los plug-ins de Flutter (Flutter SDK). ¿Cuál de los siguientes softwares puede usarse para construir una aplicación Flutter? (Selecciona tres)",
+    "options": [
+      {
+        "id": "A",
+        "text": "NotePad"
+      },
+      {
+        "id": "B",
+        "text": "Visual Studio"
+      },
+      {
+        "id": "C",
+        "text": "IntelliJ"
+      },
+      {
+        "id": "D",
+        "text": "Android Studio"
+      }
+    ],
+    "correctOptionId": "B,C,D",
+    "explanation": "Las tres herramientas de desarrollo principales que son plenamente compatibles con Flutter son Visual Studio Code (B), IntelliJ IDEA (C) y Android Studio (D). Todas ellas ofrecen plugins oficiales para Flutter que proporcionan funciones como resaltado de sintaxis, depuración, y herramientas específicas para desarrollo Flutter. Aunque se podría usar un editor simple como NotePad, este no ofrece las herramientas y funcionalidades necesarias para un desarrollo eficiente con Flutter.",
+    "category": "Flutter"
+  },
+  {
+    "id": "194",
+    "text": "................. comando comprueba tu entorno y muestra un informe del estado de tu instalación de Flutter y Android Studio u otro software IDE. ¿Cuál de las siguientes opciones es la respuesta correcta para completar el espacio en blanco anterior?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Flutter Doctor"
+      },
+      {
+        "id": "B",
+        "text": "Flutter Connection"
+      },
+      {
+        "id": "C",
+        "text": "Flutter Screen"
+      },
+      {
+        "id": "D",
+        "text": "Flutter IDE_XML"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Flutter Doctor es el comando que verifica el estado del entorno de desarrollo de Flutter. Al ejecutar 'flutter doctor' en la terminal, se analiza la instalación de Flutter, los IDEs configurados (como Android Studio), los dispositivos conectados y otras dependencias necesarias, mostrando un informe detallado de lo que está correctamente configurado y lo que necesita atención.",
+    "category": "Flutter"
+  },
+  {
+    "id": "195",
+    "text": "¿Cuál de las siguientes opciones es la mejor respuesta para añadir una imagen desde el disco duro de tu ordenador a un proyecto Flutter?",
+    "options": [
+      {
+        "id": "A",
+        "text": "No puedes añadir una imagen desde el disco duro de tu ordenador a un proyecto Flutter. Solo puedes configurar tu código para usar una imagen desde un enlace web."
+      },
+      {
+        "id": "B",
+        "text": "Añadir una nueva carpeta (directorio) a la estructura de archivos de Flutter, copiar la imagen desde tu disco duro, pegar esta imagen en la carpeta de imágenes y luego configurar tu archivo Dart en este proyecto Flutter para usar este nombre de archivo de imagen."
+      },
+      {
+        "id": "C",
+        "text": "Añadir una nueva carpeta (directorio) a la estructura de archivos de Flutter, copiar la imagen desde tu disco duro, pegar esta imagen en la carpeta de imágenes, configurar tu archivo Dart en este proyecto Flutter para usar este nombre de archivo de imagen, configurar tu archivo pubspec.yaml del proyecto Flutter para usar esta carpeta de imágenes, y luego hacer clic en \"Packages get\" en la parte superior del archivo pubspec.yaml."
+      },
+      {
+        "id": "D",
+        "text": "Hacer clic en el menú Archivo en cualquier IDE de Flutter, seleccionar Insertar, seleccionar Imagen, navegar para seleccionar la imagen, hacer clic en Guardar tres veces y luego reiniciar tu IDE."
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Para añadir correctamente una imagen a un proyecto Flutter, debes: 1) Crear una carpeta de recursos (generalmente 'assets' o 'images'), 2) Colocar la imagen en esa carpeta, 3) Declarar la carpeta en el archivo pubspec.yaml bajo la sección 'assets', 4) Ejecutar 'flutter pub get' para actualizar las dependencias, y 5) Usar la imagen en tu código Dart mediante Image.asset('ruta/a/imagen.png'). Este proceso completo asegura que Flutter reconozca y pueda acceder a la imagen durante la compilación.",
+    "category": "Flutter"
+  },
+  {
+    "id": "196",
+    "text": "Completa el espacio en blanco con la respuesta correcta que completa la siguiente frase. Si tienes algún error en tu código Dart de tu aplicación Flutter, la.......................... en la barra de estado de tu Android Studio muestra la descripción del error y también muestra la línea del código en la que está el error. Además, en la mayoría de los casos, el campo de descripción en esta consola te da una idea sobre la razón del error. ¿Cuál es el nombre de esta consola?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Terminal"
+      },
+      {
+        "id": "B",
+        "text": "Dart Analysis"
+      },
+      {
+        "id": "C",
+        "text": "Run"
+      },
+      {
+        "id": "D",
+        "text": "Hot Reload"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "La consola 'Dart Analysis' es la herramienta integrada en Android Studio y otros IDEs que muestra errores, advertencias y sugerencias de código en tiempo real para proyectos Dart y Flutter. Proporciona información detallada sobre problemas sintácticos y semánticos, incluyendo la ubicación precisa del error y sugerencias para solucionarlo. Es una herramienta esencial para el desarrollo eficiente en Flutter.",
+    "category": "Flutter"
+  },
+  {
+    "id": "197",
+    "text": "Firebase ofrece dos soluciones de bases de datos basadas en la nube y accesibles desde el cliente. ¿Cuál de las siguientes opciones es un tipo de base de datos de Firebase?",
+    "options": [
+      {
+        "id": "A",
+        "text": "SQL y MySQL"
+      },
+      {
+        "id": "B",
+        "text": "Realtime Database y Cloud Firestore"
+      },
+      {
+        "id": "C",
+        "text": "Cloud Firestore y MySQL"
+      },
+      {
+        "id": "D",
+        "text": "Realtime Database y SQL"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Firebase ofrece dos soluciones principales de bases de datos: Realtime Database y Cloud Firestore. Ambas son bases de datos NoSQL basadas en la nube que permiten almacenar y sincronizar datos en tiempo real entre clientes. Realtime Database es la solución original, mientras que Cloud Firestore es una versión más nueva con características mejoradas como consultas más potentes, mejor escalabilidad y una estructura de datos más intuitiva basada en colecciones y documentos.",
+    "category": "Flutter"
+  },
+  {
+    "id": "198",
+    "text": "Al configurar tu aplicación Android en el sitio web de Firebase, debes descargar el archivo google-services.json desde el sitio web de Firebase y añadirlo a los archivos de tu aplicación Android. Selecciona la mejor respuesta de las siguientes opciones: ¿Cuál es el papel principal de este archivo para tu aplicación?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Este archivo de configuración incluye los ajustes de conexión https entre tu aplicación Android y los servicios de Firebase."
+      },
+      {
+        "id": "B",
+        "text": "Este archivo incluye tu nombre de usuario y contraseña para el sitio web de Firebase."
+      },
+      {
+        "id": "C",
+        "text": "El papel de este archivo es importar las últimas actualizaciones de seguridad desde el sitio web de Firebase a los usuarios de la aplicación."
+      },
+      {
+        "id": "D",
+        "text": "Este archivo comprueba si el dispositivo del usuario de la aplicación tiene conexión a Internet cada vez que el usuario inicia la aplicación."
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "El archivo google-services.json contiene toda la configuración y credenciales necesarias para conectar tu aplicación Android con los servicios de Firebase. Incluye información como la clave de API, ID del proyecto, ID de la aplicación, y otros ajustes de configuración que permiten que tu aplicación se autentique y comunique de forma segura con los servicios de Firebase a través de conexiones HTTPS. Este archivo es esencial para integrar cualquier servicio de Firebase (como Authentication, Cloud Firestore, Analytics, etc.) en tu aplicación Android.",
+    "category": "Flutter"
   }
 ]
