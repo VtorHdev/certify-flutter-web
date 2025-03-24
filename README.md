@@ -6,7 +6,7 @@
 
 Una aplicación web interactiva para preparar la certificación **Flutter Certified Application Developer (AFD-200)** con preguntas de práctica y exámenes simulados.
 
-🚀 [Acceder a la aplicación web](https://tu-usuario.github.io/certify-flutter-web/)
+🚀 [Acceder a la aplicación web](https://vtorhdev.github.io/certify-flutter-web/)
 
 ## 📱 Características principales
 
