@@ -173,7 +173,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Hot reload inyecta el código actualizado en la máquina virtual de Dart y Flutter reconstruye el árbol de widgets conservando el estado. Hot restart reinicia completamente la aplicación, perdiendo todo el estado.",
-    "category": "Desarrollo"
+    "category": "Configuración"
   },
   {
     "id": "8",
@@ -1023,7 +1023,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "La biblioteca 'http' es la forma estándar de realizar peticiones HTTP en aplicaciones Flutter. Proporciona clases y funciones para realizar solicitudes GET, POST, PUT, DELETE, etc.",
-    "category": "Desarrollo"
+    "category": "Librerías"
   },
   {
     "id": "47",
@@ -1073,7 +1073,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "La biblioteca 'http' es la forma estándar de realizar peticiones HTTP en aplicaciones Flutter. Proporciona clases y funciones para realizar solicitudes GET, POST, PUT, DELETE, etc.",
-    "category": "Networking"
+    "category": "Librerías"
   },
   {
     "id": "50",
@@ -1223,7 +1223,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Hot Reload es una característica de desarrollo de Flutter que permite ver los cambios realizados en el código casi instantáneamente sin perder el estado actual de la aplicación, lo que acelera significativamente el ciclo de desarrollo.",
-    "category": "Desarrollo"
+    "category": "Configuración"
   },
   {
     "id": "58",
@@ -1473,7 +1473,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "pubspec.yaml es un archivo que contiene metadatos sobre un proyecto Flutter, incluidas las dependencias, los activos (assets), las fuentes y otra información que el sistema de paquetes de Dart (pub) utiliza para gestionar el proyecto.",
-    "category": "Desarrollo"
+    "category": "Configuración"
   },
   {
     "id": "73",
@@ -1498,7 +1498,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "shared_preferences es un paquete comúnmente utilizado para almacenar datos persistentes simples en Flutter. Permite guardar pares clave-valor como booleanos, strings, números y listas en el almacenamiento del dispositivo.",
-    "category": "Datos"
+    "category": "Librerías"
   },
   {
     "id": "75",
@@ -1549,31 +1549,6 @@
     "correctOptionId": "B",
     "explanation": "SizedBox es un widget que tiene un tamaño específico. Se utiliza para dar dimensiones específicas a un widget hijo o para crear espacios en blanco cuando se usa sin hijos (por ejemplo, como separador).",
     "category": "Widgets"
-  },
-  {
-    "id": "78",
-    "text": "¿Qué es el patrón Provider en Flutter?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Un patrón para optimizar el rendimiento del renderizado"
-      },
-      {
-        "id": "B",
-        "text": "Un patrón para gestionar el estado basado en InheritedWidget"
-      },
-      {
-        "id": "C",
-        "text": "Un patrón para estructurar archivos en un proyecto"
-      },
-      {
-        "id": "D",
-        "text": "Un patrón para crear animaciones fluidas"
-      }
-    ],
-    "correctOptionId": "B",
-    "explanation": "Provider es un patrón de gestión de estado en Flutter que utiliza InheritedWidget para propagar datos a través del árbol de widgets. Es una alternativa más simple y estructurada al uso directo de InheritedWidget.",
-    "category": "Arquitectura"
   },
   {
     "id": "81",
@@ -1898,7 +1873,7 @@
     ],
     "correctOptionId": "A",
     "explanation": "Hot Restart reinicia completamente la aplicación, recompilando todo el código y perdiendo el estado actual. Hot Reload, por otro lado, conserva el estado de la aplicación y solo actualiza la UI basada en los cambios de código realizados, lo que hace que sea más rápido para el desarrollo iterativo.",
-    "category": "Desarrollo"
+    "category": "Configuración"
   },
   {
     "id": "104",
@@ -1948,7 +1923,7 @@
     ],
     "correctOptionId": "C",
     "explanation": "Los Widget tests son el tipo de prueba ideal para verificar la interacción del usuario con widgets específicos. Permiten simular toques, gestos y otras interacciones, y verificar que los widgets responden correctamente, sin necesidad de ejecutar toda la aplicación como en los Integration tests.",
-    "category": "Testing"
+    "category": "Widgets"
   },
   {
     "id": "106",
@@ -2148,7 +2123,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "DartPad es una herramienta en línea que permite escribir, ejecutar y compartir código Dart y Flutter sin necesidad de instalar nada en el equipo local. Es útil para aprender, experimentar y compartir ejemplos de código.",
-    "category": "Desarrollo"
+    "category": "Configuración"
   },
   {
     "id": "123",
@@ -2323,7 +2298,7 @@
     ],
     "correctOptionId": "A",
     "explanation": "El archivo android/app/build.gradle se utiliza para configurar propiedades específicas de la aplicación Android en un proyecto Flutter, como la versión del SDK, dependencias, nombre del paquete, y más.",
-    "category": "Desarrollo"
+    "category": "Configuración"
   },
   {
     "id": "130",
@@ -2373,7 +2348,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Visual Studio Code y Android Studio son los dos IDEs oficialmente recomendados y mejor soportados para el desarrollo con Flutter. Ambos disponen de plugins específicos que ofrecen funcionalidades como hot reload, depuración, completado de código y otras herramientas específicas para Flutter.",
-    "category": "Desarrollo"
+    "category": "Configuración"
   },
   {
     "id": "132",
@@ -2398,7 +2373,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Para instalar el plugin de Flutter en Android Studio, hay que ir a File > Settings > Plugins (o Android Studio > Preferences > Plugins en macOS), buscar 'Flutter' en el marketplace e instalarlo. El plugin de Dart se instalará automáticamente como dependencia.",
-    "category": "Desarrollo"
+    "category": "Configuración"
   },
   {
     "id": "133",
@@ -2473,7 +2448,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Se configura un emulador de Android para Flutter principalmente a través del AVD (Android Virtual Device) Manager en Android Studio. Desde allí, se pueden crear y gestionar dispositivos virtuales con diferentes configuraciones de hardware y versiones de Android.",
-    "category": "Desarrollo"
+    "category": "Configuración"
   },
   {
     "id": "136",
@@ -2498,7 +2473,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Para ejecutar una aplicación Flutter en un dispositivo iOS real, se necesita un Mac con XCode instalado, una cuenta de desarrollador de Apple (gratis o de pago), y un dispositivo iOS conectado por USB con el modo de desarrollador activado.",
-    "category": "Desarrollo"
+    "category": "Configuración"
   },
   {
     "id": "137",
@@ -2773,7 +2748,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Para personalizar una fuente en Flutter: 1) Añade los archivos de fuente a una carpeta del proyecto, 2) Declara las fuentes en la sección fonts del pubspec.yaml, 3) Usa la fuente estableciendo fontFamily en ThemeData o directamente en el estilo de los widgets Text.",
-    "category": "Diseño"
+    "category": "Configuración"
   },
   {
     "id": "148",
@@ -3145,8 +3120,7 @@
   },
   {
     "id": "180",
-    "text": "Para configurar un CheckboxGroup o un RadioButtonGroup en una aplicación Flutter, primero debes establecer las configuraciones que se ilustran en la imagen de esta pregunta. ¿Cuál es el nombre del archivo que incluye estas configuraciones?",
-    "codeSnippet": "dependencies:\n  flutter:\n    sdk: flutter\n  grouped_buttons: ^1.0.4",
+    "text": "Para configurar un CheckboxGroup o un RadioButtonGroup en una aplicación Flutter, primero debes establecer las configuraciones que se ilustran en la imagen de esta pregunta:\ndependencies:\n  flutter:\n    sdk: flutter\n  grouped_buttons: ^1.0.4\n¿Cuál es el nombre del archivo que incluye estas configuraciones?",
     "options": [
       {
         "id": "A",
@@ -3167,7 +3141,7 @@
     ],
     "correctOptionId": "C",
     "explanation": "El archivo pubspec.yaml es donde se declaran todas las dependencias de un proyecto Flutter. Es en este archivo donde se añaden los paquetes externos como 'grouped_buttons' que se utilizarán en la aplicación. Este archivo también contiene metadatos del proyecto, configuración de assets, fuentes y otras propiedades del proyecto.",
-    "category": "Flutter"
+    "category": "Configuración"
   },
   {
     "id": "181",
@@ -3184,7 +3158,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Falso. Flutter utiliza el enfoque de código nativo para cada plataforma, por lo que los iconos deben configurarse por separado para Android e iOS. El icono de Android se configura en android/app/src/main/res/, mientras que el icono de iOS se configura en ios/Runner/Assets.xcassets/AppIcon.appiconset/. Existen paquetes como flutter_launcher_icons que pueden facilitar este proceso, pero la configuración sigue siendo específica para cada plataforma.",
-    "category": "Flutter"
+    "category": "Desarrollo"
   },
   {
     "id": "182",
@@ -3293,7 +3267,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Falso. Para utilizar fuentes personalizadas en Flutter, no solo debes colocar los archivos de fuente en una carpeta del proyecto, sino que también es obligatorio declararlos en el archivo pubspec.yaml en la sección 'fonts'. Esto permite que Flutter reconozca y registre las fuentes para su uso en la aplicación.",
-    "category": "Flutter"
+    "category": "Configuración"
   },
   {
     "id": "187",
@@ -3310,7 +3284,7 @@
     ],
     "correctOptionId": "A",
     "explanation": "Verdadero. Una vez que el SDK de Flutter está instalado en tu ordenador y configurado como un plugin para Android Studio (o cualquier otro IDE compatible), Android Studio puede crear y gestionar aplicaciones Flutter. Esto se hace instalando el plugin de Flutter y Dart desde el marketplace de plugins de Android Studio, lo que añade soporte para crear proyectos Flutter, ejecutarlos y depurarlos directamente desde el IDE.",
-    "category": "Flutter"
+    "category": "Configuración"
   },
   {
     "id": "188",
@@ -3352,7 +3326,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Falso. Aunque es cierto que necesitas instalar el SDK de Flutter y un IDE como Android Studio para desarrollar aplicaciones Flutter en Mac, puedes probar tus aplicaciones tanto en emuladores de iPhone (usando Xcode) como en emuladores de Android (usando Android Studio). Un Mac permite desarrollar y probar aplicaciones para ambas plataformas.",
-    "category": "Flutter"
+    "category": "Configuración"
   },
   {
     "id": "190",
@@ -3394,7 +3368,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Falso. Flutter permite probar aplicaciones en dispositivos físicos reales antes de publicarlas en las tiendas. Para Android, puedes habilitar el modo desarrollador en el dispositivo y conectarlo por USB. Para iOS, necesitas una cuenta de desarrollador de Apple y configurar el dispositivo en Xcode. Esta práctica es altamente recomendada para verificar el rendimiento y la experiencia de usuario en hardware real.",
-    "category": "Flutter"
+    "category": "Configuración"
   },
   {
     "id": "192",
@@ -3436,7 +3410,7 @@
     ],
     "correctOptionId": "B,C,D",
     "explanation": "Las tres herramientas de desarrollo principales que son plenamente compatibles con Flutter son Visual Studio Code (B), IntelliJ IDEA (C) y Android Studio (D). Todas ellas ofrecen plugins oficiales para Flutter que proporcionan funciones como resaltado de sintaxis, depuración, y herramientas específicas para desarrollo Flutter. Aunque se podría usar un editor simple como NotePad, este no ofrece las herramientas y funcionalidades necesarias para un desarrollo eficiente con Flutter.",
-    "category": "Flutter"
+    "category": "Configuración"
   },
   {
     "id": "194",
@@ -3461,7 +3435,7 @@
     ],
     "correctOptionId": "A",
     "explanation": "Flutter Doctor es el comando que verifica el estado del entorno de desarrollo de Flutter. Al ejecutar 'flutter doctor' en la terminal, se analiza la instalación de Flutter, los IDEs configurados (como Android Studio), los dispositivos conectados y otras dependencias necesarias, mostrando un informe detallado de lo que está correctamente configurado y lo que necesita atención.",
-    "category": "Flutter"
+    "category": "Configuración"
   },
   {
     "id": "195",
@@ -3486,7 +3460,7 @@
     ],
     "correctOptionId": "C",
     "explanation": "Para añadir correctamente una imagen a un proyecto Flutter, debes: 1) Crear una carpeta de recursos (generalmente 'assets' o 'images'), 2) Colocar la imagen en esa carpeta, 3) Declarar la carpeta en el archivo pubspec.yaml bajo la sección 'assets', 4) Ejecutar 'flutter pub get' para actualizar las dependencias, y 5) Usar la imagen en tu código Dart mediante Image.asset('ruta/a/imagen.png'). Este proceso completo asegura que Flutter reconozca y pueda acceder a la imagen durante la compilación.",
-    "category": "Flutter"
+    "category": "Configuración"
   },
   {
     "id": "196",
@@ -3511,7 +3485,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "La consola 'Dart Analysis' es la herramienta integrada en Android Studio y otros IDEs que muestra errores, advertencias y sugerencias de código en tiempo real para proyectos Dart y Flutter. Proporciona información detallada sobre problemas sintácticos y semánticos, incluyendo la ubicación precisa del error y sugerencias para solucionarlo. Es una herramienta esencial para el desarrollo eficiente en Flutter.",
-    "category": "Flutter"
+    "category": "Configuración"
   },
   {
     "id": "197",
@@ -3536,7 +3510,7 @@
     ],
     "correctOptionId": "B",
     "explanation": "Firebase ofrece dos soluciones principales de bases de datos: Realtime Database y Cloud Firestore. Ambas son bases de datos NoSQL basadas en la nube que permiten almacenar y sincronizar datos en tiempo real entre clientes. Realtime Database es la solución original, mientras que Cloud Firestore es una versión más nueva con características mejoradas como consultas más potentes, mejor escalabilidad y una estructura de datos más intuitiva basada en colecciones y documentos.",
-    "category": "Flutter"
+    "category": "Firebase"
   },
   {
     "id": "198",
@@ -3561,6 +3535,6 @@
     ],
     "correctOptionId": "A",
     "explanation": "El archivo google-services.json contiene toda la configuración y credenciales necesarias para conectar tu aplicación Android con los servicios de Firebase. Incluye información como la clave de API, ID del proyecto, ID de la aplicación, y otros ajustes de configuración que permiten que tu aplicación se autentique y comunique de forma segura con los servicios de Firebase a través de conexiones HTTPS. Este archivo es esencial para integrar cualquier servicio de Firebase (como Authentication, Cloud Firestore, Analytics, etc.) en tu aplicación Android.",
-    "category": "Flutter"
+    "category": "Firebase"
   }
 ]
