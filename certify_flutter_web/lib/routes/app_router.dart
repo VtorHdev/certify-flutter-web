@@ -23,36 +23,18 @@ class AppRouter {
             path: '/',
             builder: (context, state) => const HomeScreen(),
             pageBuilder:
-                (context, state) => CustomTransitionPage(
+                (context, state) => NoTransitionPage(
                   key: state.pageKey,
                   child: const HomeScreen(),
-                  transitionsBuilder: (
-                    context,
-                    animation,
-                    secondaryAnimation,
-                    child,
-                  ) {
-                    return FadeTransition(opacity: animation, child: child);
-                  },
-                  transitionDuration: const Duration(milliseconds: 200),
                 ),
           ),
           GoRoute(
             path: '/study',
             builder: (context, state) => const StudyScreen(),
             pageBuilder:
-                (context, state) => CustomTransitionPage(
+                (context, state) => NoTransitionPage(
                   key: state.pageKey,
                   child: const StudyScreen(),
-                  transitionsBuilder: (
-                    context,
-                    animation,
-                    secondaryAnimation,
-                    child,
-                  ) {
-                    return FadeTransition(opacity: animation, child: child);
-                  },
-                  transitionDuration: const Duration(milliseconds: 200),
                 ),
             routes: [
               GoRoute(
@@ -62,21 +44,12 @@ class AppRouter {
                   return StudyScreen(initialCategory: categoryId);
                 },
                 pageBuilder:
-                    (context, state) => CustomTransitionPage(
+                    (context, state) => NoTransitionPage(
                       key: state.pageKey,
                       child: StudyScreen(
                         initialCategory:
                             state.pathParameters['categoryId'] ?? '',
                       ),
-                      transitionsBuilder: (
-                        context,
-                        animation,
-                        secondaryAnimation,
-                        child,
-                      ) {
-                        return FadeTransition(opacity: animation, child: child);
-                      },
-                      transitionDuration: const Duration(milliseconds: 200),
                     ),
               ),
               GoRoute(
@@ -86,20 +59,11 @@ class AppRouter {
                   return QuestionDetailsScreen(questionId: questionId);
                 },
                 pageBuilder:
-                    (context, state) => CustomTransitionPage(
+                    (context, state) => NoTransitionPage(
                       key: state.pageKey,
                       child: QuestionDetailsScreen(
                         questionId: state.pathParameters['questionId'] ?? '',
                       ),
-                      transitionsBuilder: (
-                        context,
-                        animation,
-                        secondaryAnimation,
-                        child,
-                      ) {
-                        return FadeTransition(opacity: animation, child: child);
-                      },
-                      transitionDuration: const Duration(milliseconds: 200),
                     ),
               ),
             ],
@@ -108,54 +72,27 @@ class AppRouter {
             path: '/exam',
             builder: (context, state) => const ExamIntroScreen(),
             pageBuilder:
-                (context, state) => CustomTransitionPage(
+                (context, state) => NoTransitionPage(
                   key: state.pageKey,
                   child: const ExamIntroScreen(),
-                  transitionsBuilder: (
-                    context,
-                    animation,
-                    secondaryAnimation,
-                    child,
-                  ) {
-                    return FadeTransition(opacity: animation, child: child);
-                  },
-                  transitionDuration: const Duration(milliseconds: 200),
                 ),
             routes: [
               GoRoute(
                 path: 'start',
                 builder: (context, state) => const ExamScreen(),
                 pageBuilder:
-                    (context, state) => CustomTransitionPage(
+                    (context, state) => NoTransitionPage(
                       key: state.pageKey,
                       child: const ExamScreen(),
-                      transitionsBuilder: (
-                        context,
-                        animation,
-                        secondaryAnimation,
-                        child,
-                      ) {
-                        return FadeTransition(opacity: animation, child: child);
-                      },
-                      transitionDuration: const Duration(milliseconds: 200),
                     ),
               ),
               GoRoute(
                 path: 'result',
                 builder: (context, state) => const ExamResultScreen(),
                 pageBuilder:
-                    (context, state) => CustomTransitionPage(
+                    (context, state) => NoTransitionPage(
                       key: state.pageKey,
                       child: const ExamResultScreen(),
-                      transitionsBuilder: (
-                        context,
-                        animation,
-                        secondaryAnimation,
-                        child,
-                      ) {
-                        return FadeTransition(opacity: animation, child: child);
-                      },
-                      transitionDuration: const Duration(milliseconds: 200),
                     ),
               ),
             ],
@@ -164,18 +101,9 @@ class AppRouter {
             path: '/about',
             builder: (context, state) => const AboutScreen(),
             pageBuilder:
-                (context, state) => CustomTransitionPage(
+                (context, state) => NoTransitionPage(
                   key: state.pageKey,
                   child: const AboutScreen(),
-                  transitionsBuilder: (
-                    context,
-                    animation,
-                    secondaryAnimation,
-                    child,
-                  ) {
-                    return FadeTransition(opacity: animation, child: child);
-                  },
-                  transitionDuration: const Duration(milliseconds: 200),
                 ),
           ),
         ],
