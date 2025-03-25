@@ -19,10 +19,41 @@ class AppRouter {
           return PageScaffold(child: child);
         },
         routes: [
-          GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
+          GoRoute(
+            path: '/',
+            builder: (context, state) => const HomeScreen(),
+            pageBuilder:
+                (context, state) => CustomTransitionPage(
+                  key: state.pageKey,
+                  child: const HomeScreen(),
+                  transitionsBuilder: (
+                    context,
+                    animation,
+                    secondaryAnimation,
+                    child,
+                  ) {
+                    return FadeTransition(opacity: animation, child: child);
+                  },
+                  transitionDuration: const Duration(milliseconds: 200),
+                ),
+          ),
           GoRoute(
             path: '/study',
             builder: (context, state) => const StudyScreen(),
+            pageBuilder:
+                (context, state) => CustomTransitionPage(
+                  key: state.pageKey,
+                  child: const StudyScreen(),
+                  transitionsBuilder: (
+                    context,
+                    animation,
+                    secondaryAnimation,
+                    child,
+                  ) {
+                    return FadeTransition(opacity: animation, child: child);
+                  },
+                  transitionDuration: const Duration(milliseconds: 200),
+                ),
             routes: [
               GoRoute(
                 path: 'category/:categoryId',
@@ -30,6 +61,23 @@ class AppRouter {
                   final categoryId = state.pathParameters['categoryId'] ?? '';
                   return StudyScreen(initialCategory: categoryId);
                 },
+                pageBuilder:
+                    (context, state) => CustomTransitionPage(
+                      key: state.pageKey,
+                      child: StudyScreen(
+                        initialCategory:
+                            state.pathParameters['categoryId'] ?? '',
+                      ),
+                      transitionsBuilder: (
+                        context,
+                        animation,
+                        secondaryAnimation,
+                        child,
+                      ) {
+                        return FadeTransition(opacity: animation, child: child);
+                      },
+                      transitionDuration: const Duration(milliseconds: 200),
+                    ),
               ),
               GoRoute(
                 path: 'question/:questionId',
@@ -37,26 +85,98 @@ class AppRouter {
                   final questionId = state.pathParameters['questionId'] ?? '';
                   return QuestionDetailsScreen(questionId: questionId);
                 },
+                pageBuilder:
+                    (context, state) => CustomTransitionPage(
+                      key: state.pageKey,
+                      child: QuestionDetailsScreen(
+                        questionId: state.pathParameters['questionId'] ?? '',
+                      ),
+                      transitionsBuilder: (
+                        context,
+                        animation,
+                        secondaryAnimation,
+                        child,
+                      ) {
+                        return FadeTransition(opacity: animation, child: child);
+                      },
+                      transitionDuration: const Duration(milliseconds: 200),
+                    ),
               ),
             ],
           ),
           GoRoute(
             path: '/exam',
             builder: (context, state) => const ExamIntroScreen(),
+            pageBuilder:
+                (context, state) => CustomTransitionPage(
+                  key: state.pageKey,
+                  child: const ExamIntroScreen(),
+                  transitionsBuilder: (
+                    context,
+                    animation,
+                    secondaryAnimation,
+                    child,
+                  ) {
+                    return FadeTransition(opacity: animation, child: child);
+                  },
+                  transitionDuration: const Duration(milliseconds: 200),
+                ),
             routes: [
               GoRoute(
                 path: 'start',
                 builder: (context, state) => const ExamScreen(),
+                pageBuilder:
+                    (context, state) => CustomTransitionPage(
+                      key: state.pageKey,
+                      child: const ExamScreen(),
+                      transitionsBuilder: (
+                        context,
+                        animation,
+                        secondaryAnimation,
+                        child,
+                      ) {
+                        return FadeTransition(opacity: animation, child: child);
+                      },
+                      transitionDuration: const Duration(milliseconds: 200),
+                    ),
               ),
               GoRoute(
                 path: 'result',
                 builder: (context, state) => const ExamResultScreen(),
+                pageBuilder:
+                    (context, state) => CustomTransitionPage(
+                      key: state.pageKey,
+                      child: const ExamResultScreen(),
+                      transitionsBuilder: (
+                        context,
+                        animation,
+                        secondaryAnimation,
+                        child,
+                      ) {
+                        return FadeTransition(opacity: animation, child: child);
+                      },
+                      transitionDuration: const Duration(milliseconds: 200),
+                    ),
               ),
             ],
           ),
           GoRoute(
             path: '/about',
             builder: (context, state) => const AboutScreen(),
+            pageBuilder:
+                (context, state) => CustomTransitionPage(
+                  key: state.pageKey,
+                  child: const AboutScreen(),
+                  transitionsBuilder: (
+                    context,
+                    animation,
+                    secondaryAnimation,
+                    child,
+                  ) {
+                    return FadeTransition(opacity: animation, child: child);
+                  },
+                  transitionDuration: const Duration(milliseconds: 200),
+                ),
           ),
         ],
       ),
